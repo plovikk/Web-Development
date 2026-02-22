@@ -15,3 +15,30 @@ I am an aspiring **C# Developer** with a deep interest in backend architecture a
 - **Email:** [batya@gmail.com](mailto:batya@gmail.com)
 - **GitHub:** [github.com/plovikk](https://github.com/plovikk)
 - **Telegram:** @mit1z
+
+---
+
+## 💻 Skills
+- **Languages:** C#, SQL, HTML5
+- **Tools:** Visual Studio, VS Code
+- **Systems:** Windows, Linux
+- **Other:** English B1+
+
+---
+
+## ⌨️ Code Example (C#)
+
+```csharp
+public class UserProfile
+{
+    public string GetAccessStatus(int age)
+    {
+        if (age >= 18)
+        {
+            return "Access Granted";
+        }
+        
+        return "Access Denied";
+    }
+}
+```
