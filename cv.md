@@ -42,3 +42,27 @@ public class UserProfile
     }
 }
 ```
+## 🚀 Projects
+1. **Mobile Crypto Exchange**
+   - *Description:* Mobile app made with C# and VS. You can analyze graphics of different coins, buy them using virtual crypto, make deposit and store assets in the wallet.
+   - *Link:* [Source Code](https://github.com/plovikk/Web-Development)
+2. **Information system "PC Repairing"**
+   - *Description:* Windows Form app which was made for clients, masters and admins to simplify the communication between each other.
+3. **My CV (This Project)**
+   - *Description:* This digital curriculum vitae created using Markdown as part of a University lab.
+
+---
+
+## 🎓 Education
+| Course / University | Platform | Year |
+| :--- | :--- | :---: |
+| **C# for Beginners** | Simple Code Channel (YouTube) | 2024 |
+| **Software Engineering** | BRU, Belarus | 2024 - present |
+
+---
+
+## 🌍 Languages
+- **English:** B1+ (Intermediate). Focus on technical documentation.
+
+---
+© 2026 Dmitrii Petrovskii. All rights reserved.
