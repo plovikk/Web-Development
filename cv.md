@@ -45,7 +45,6 @@ public class UserProfile
 ## 🚀 Projects
 1. **Mobile Crypto Exchange**
    - *Description:* Mobile app made with C# and VS. You can analyze graphics of different coins, buy them using virtual crypto, make deposit and store assets in the wallet.
-   - *Link:* [Source Code](https://github.com/plovikk/Web-Development)
 2. **Information system "PC Repairing"**
    - *Description:* Windows Form app which was made for clients, masters and admins to simplify the communication between each other.
 3. **My CV (This Project)**
