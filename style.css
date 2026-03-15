@@ -211,6 +211,117 @@ body {
   justify-content: center;
 }
 
+.about {
+  margin-top: 127px; /* Отступ от предыдущей секции */
+  padding-bottom: 120px;
+}
 
+/* Сетка: 1200px шириной, центрированная */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Две равные колонки */
+  column-gap: 50px; /* Отступ между левой и правой частью по макету */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стили заголовков */
+.about__title {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 70px; /* 120% */
+  text-transform: uppercase;
+  width: 392px; /* Ширина из макета */
+}
+
+.about__subtitle {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 690px; /* Ширина из макета */
+}
+
+/* Описание (параграфы) */
+.about__description {
+  margin-top: 32px; /* Расстояние от заголовков до текста */
+  display: flex;
+  flex-direction: column;
+  gap: 21px; /* Расстояние между абзацами */
+}
+
+.about__text {
+  color: #747474; /* Серый цвет из макета */
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24.7px; /* ~130% */
+  max-width: 379px; /* Ограничиваем ширину текста как в Figma */
+}
+
+/* Контейнер для всей правой части */
+.about__awards {
+  width: 383px; /* Строго по макету */
+  display: flex;
+  flex-direction: column;
+  gap: 72px; /* Расстояние между двумя блоками наград */
+  padding-top: 217px;/* Отступ сверху до первой линии (из скрина) */
+  justify-self: end; 
+}
+
+/* Заголовок блока (название + общее число) */
+.awards-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #000; /* Черная линия */
+  padding-bottom: 16px;
+  margin-bottom: 16px; /* Расстояние до начала списка */
+}
+
+.awards-block__title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+
+.awards-block__total {
+  margin: 0;
+  font-size: 24px; /* Цифра чуть больше текста */
+  font-weight: 700;
+}
+
+/* Список наград */
+.awards-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.awards-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 34px;
+}
+
+.awards-item__name {
+  color: #747474;
+  font-size: 19px;
+  line-height: 24.7px;
+}
+
+.awards-item__value {
+  color: #747474;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
 
 
