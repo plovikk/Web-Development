@@ -122,10 +122,10 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 38px;
+  gap: 100px;
   position: absolute;
   right: 22px;
-  bottom: 85px;
+  bottom: 23px;
 }
 .hero__title {
   display: flex;
@@ -222,7 +222,8 @@ body {
 }
 
 .about {
-  margin-top: 127px; 
+  margin-top: 127px;
+   
 }
 
 
@@ -281,7 +282,7 @@ body {
   gap: 72px; 
   padding-top: 217px;
   justify-self: end; 
-}
+} 
 
 
 .awards-block__header {
