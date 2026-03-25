@@ -348,77 +348,107 @@ body {
   line-height: 24.7px; /* 130% */
 }
 
+/*-------------------------------------------*/
 .works {
-  margin-top: 152px;
-  padding-bottom: 0px;
+  display: flex;
+  width: 1079px;
+  height: 1960px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .works__title {
-  font-size: 60px;
-  line-height: 72px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 20px;
+  display: flex;
+  width: 469px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
+/* .works__title--bold{
+color: #000;
+font-family: Roboto;
+font-size: 60px;
+font-style: normal;
+font-weight: 400;
+line-height: 72px;
+text-transform: uppercase;
+
+} */
+
 .works__title--light {
+  color: #000;
+  font-family: Roboto;
+  font-size: 60px;
+  font-style: normal;
   font-weight: 400;
+  line-height: 72px;
+  text-transform: uppercase;
 }
 
 .works__container {
   display: flex;
-  justify-content: center;
-  gap: 22.53px;
-  margin: 0 auto;
+  align-items: flex-start;
 }
 
-.works__column {
+.works__column-left {
   display: flex;
+  width: 540px;
   flex-direction: column;
-  gap: 24px;
+  align-items: center;
+  gap: 40px;
 }
 
-.works__column--right {
-  margin-top: 100px;
+.works__column-right {
+  display: flex;
+  width: 540px;
+  height: 1868px;
+  padding-top: 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
 .works__item {
   display: flex;
+  width: 540px;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 40px;
 }
 
 .works__image {
   width: 470px;
   height: 502px;
-  overflow: hidden;
-  margin-bottom: 43.5px;
 }
 
-.works__image img {
+/* .works__image img {            вроде не нужно это
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
+} */
 
 .works__name {
-  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
   font-size: 22px;
+  font-style: normal;
   font-weight: 700;
+  line-height: 30px; /* 136.364% */
   text-transform: uppercase;
-  line-height: 1.1;
-  margin-bottom: 4px;
 }
 
 .works__category {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 400;
   color: #747474;
-  line-height: 1.1;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
 }
 
 .improve {
