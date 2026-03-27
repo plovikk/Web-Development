@@ -355,7 +355,7 @@ body {
   display: flex;
   width: 1079px;
   flex-direction: column;
-  align-items: center;              
+  align-items: center;
   margin: 150px auto 100px;
   gap: 20px;
 }
@@ -448,12 +448,11 @@ body {
 
 .improve {
   padding-left: 194.25px;
-  padding-bottom: 120px;
+  padding-bottom: 113.5px;
   display: flex;
   align-items: center;
   gap: 160px;
 }
-
 
 .improve__content {
   display: flex;
@@ -479,7 +478,7 @@ body {
 
 .improve__item {
   display: flex;
-  max-width: 403px;
+  min-width: 403px;
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -487,13 +486,13 @@ body {
 }
 
 .improve__item-title {
-color: #000;
-font-family: Roboto;
-font-size: 22px;
-font-style: normal;
-font-weight: 700;
-line-height: 30px; /* 136.364% */
-text-transform: uppercase;
+  color: #000;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 136.364% */
+  text-transform: uppercase;
 }
 
 .improve__item-title--light {
@@ -503,11 +502,11 @@ text-transform: uppercase;
 .improve__item-text {
   align-self: stretch;
   color: #747474;
-font-family: Roboto;
-font-size: 19px;
-font-style: normal;
-font-weight: 400;
-line-height: 24.7px; /* 130% */
+  font-family: Roboto;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24.7px; /* 130% */
 }
 
 .improve__image {
@@ -520,4 +519,274 @@ line-height: 24.7px; /* 130% */
   height: 100%;
   object-fit: contain;
   display: block;
+}
+
+.opinion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 47px;
+}
+
+.opinion__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 95px;
+}
+
+.opinion__title-container {
+  display: flex;
+  width: 477px;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.opinion__title-text {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 100% */
+  text-transform: uppercase;
+}
+
+.opinion__title-text-light {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px; /* 142.857% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.opinion__cards {
+  display: flex;
+  height: 348px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.opinion__item {
+  display: flex;
+  width: 460px;
+  height: 348px;
+  padding: 25px 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  opacity: 0.32; /*?/??????????????????????*/
+  background: #fff;
+}
+
+.opinion__item-phrase {
+  align-self: stretch;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26.4px; /* 132% */
+}
+
+.opinion__person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  align-self: stretch;
+}
+
+.opinion__image {
+  width: 80px;
+  height: 80px;
+}
+
+.opinion__person-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.opinion__person-name {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 117.647% */
+  text-transform: uppercase;
+}
+
+.opinion__person-status {
+  align-self: stretch;
+  color: #747474;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.1px; /* 130% */
+}
+
+.opinion__slider {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  align-self: stretch;
+}
+
+.opinion__dot-active {
+  width: 10px;
+  height: 10px;
+  background: #222;
+}
+
+.opinion__dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(34, 34, 34, 0.4);
+}
+
+.team {
+  padding-top: 100px;
+  display: flex;
+  overflow: hidden;
+}
+.team__side {
+  display: flex;
+  width: 720px;
+  height: 582px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+}
+.team__container {
+  display: flex;
+  width: 451px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.team__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.team__header-text {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px; /* 120% */
+  text-transform: uppercase;
+}
+
+.team__header-text-light {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 72px; /* 171.429% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.team__statistics {
+  display: flex;
+  width: 423px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.team__item {
+  display: flex;
+  width: 423px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 10px 247px;
+  flex-wrap: wrap;
+}
+
+.team__item-text {
+  display: flex;
+  width: 423px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.team__item-text-container {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.team__line-1 {
+  width: 338px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.team__line-2 {
+  width: 173px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.team__line-3 {
+  width: 296px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.team__line-4 {
+  width: 423px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.team__caption {
+  align-self: stretch;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+}
+
+.team__image {
+  width: 719px;
+  min-height: 582px;
 }
