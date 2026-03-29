@@ -1108,3 +1108,211 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+
+.contact {
+  padding-top: 73px;
+  display: flex;
+  width: 1200px;
+  max-width: 100%;
+  height: 390px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 43px;
+}
+
+.contact__socials {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact__image {
+  width: 110px;
+  height: 63px;
+  flex-shrink: 0;
+}
+
+.contact__image img {
+}
+
+.contact__apps {
+  display: flex;
+  align-items: flex-start;
+  gap: 29px;
+}
+
+.contact__app-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Блок с адресом и кнопкой карты */
+.contact__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.contact__address {
+  display: flex;
+  width: 199px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 51px;
+}
+
+.contact__address-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.contact__address-bold {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 150% */
+  text-transform: uppercase;
+}
+
+.contact__address-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact__address-light {
+  color: #747474;
+  font-family: Roboto;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24.7px; /* 130% */
+}
+
+.contact__address-button {
+  display: flex;
+  width: 154px;
+  height: 53px;
+  padding: 7px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+border: 1px solid #000;
+background: #000;
+}
+
+.contact__address-button-text {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Блок меню (Sitemap) */
+.contact__menu {
+  display: flex;
+  width: 135px;
+  height: 219px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact__menu-map {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 150% */
+  text-transform: uppercase;
+}
+
+.contact__navigation-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  align-self: stretch;
+}
+
+.contact__navigation-item {
+}
+
+.contact__navigation-item-text {
+  color: #000;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px; /* 127.778% */
+}
+
+/* Блок контактной информации (Телефон/Email) */
+.contact__info {
+  display: flex;
+  width: 167px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact__info-text {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 150% */
+  text-transform: uppercase;
+}
+
+.contact__info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact__info-data {
+  color: #747474;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.5px; /* 152.778% */
+}
+
+/* Футер (Права и инфо о разработчике) */
+.contact__rights {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.contact__dev-info {
+  color: #747474;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.1px; /* 130% */
+}
