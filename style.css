@@ -87,6 +87,7 @@ body {
   list-style: none;
   gap: 25px;
   align-self: stretch;
+  align-items: center;
   height: 20px;
 }
 
@@ -584,8 +585,11 @@ body {
   gap: 30px;
   border-radius: 5px;
   border: 1px solid #000;
-  opacity: 0.32; /*?/??????????????????????*/
   background: #fff;
+  opacity: 0.32;
+}
+.item-central {
+  opacity: 1;
 }
 
 .opinion__item-phrase {
@@ -1023,8 +1027,8 @@ body {
 
 .talk {
   margin-top: 120px;
-  width: 100%; 
-  padding: 100px 0; 
+  width: 100%;
+  padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1109,13 +1113,11 @@ body {
   text-transform: uppercase;
 }
 
-
 .contact {
-  padding-top: 73px;
+  margin: 73px auto 0;
   display: flex;
   width: 1200px;
   max-width: 100%;
-  height: 390px;
   flex-direction: column;
   align-items: flex-start;
   gap: 43px;
@@ -1133,9 +1135,14 @@ body {
   width: 110px;
   height: 63px;
   flex-shrink: 0;
+  /* overflow: hidden; -- добавь это, если не хочешь, чтобы части логотипа вылезали за рамку */
 }
 
 .contact__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .contact__apps {
@@ -1153,7 +1160,7 @@ body {
 .contact__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   align-self: stretch;
 }
 
@@ -1185,9 +1192,9 @@ body {
 
 .contact__address-location {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
 }
 
 .contact__address-light {
@@ -1208,12 +1215,12 @@ body {
   align-items: center;
   gap: 10px;
   border-radius: 30px;
-border: 1px solid #000;
-background: #000;
+  border: 1px solid #000;
+  background: #000;
 }
 
 .contact__address-button-text {
-  color: #FFF;
+  color: #fff;
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
@@ -1249,6 +1256,8 @@ background: #000;
   align-items: flex-start;
   gap: 5px;
   align-self: stretch;
+  list-style: none;
+  padding: 0;
 }
 
 .contact__navigation-item {
@@ -1266,9 +1275,9 @@ background: #000;
 /* Блок контактной информации (Телефон/Email) */
 .contact__info {
   display: flex;
-  width: 167px;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -1284,9 +1293,9 @@ background: #000;
 
 .contact__info-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
 }
 
 .contact__info-data {
