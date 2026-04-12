@@ -101,6 +101,10 @@ body {
   line-height: 20px;
 }
 
+.header__menu-btn {
+  display: none;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 760px 1fr;
@@ -1325,4 +1329,148 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 22.1px; /* 130% */
+}
+
+/*---------------------------------------------------------------------------*/
+
+@media (max-width: 900px) {
+  body {
+    background-color: red !important;
+  }
+}
+
+
+/* --- ПЛАНШЕТ (768px) --- */
+@media screen and (max-width: 768px) {
+  
+  .container {
+    padding: 0 19px;
+  }
+
+  /* ШАПКА: Почему не было бургера и текст в две строки? */
+  .header {
+    height: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row; /* Текст слева, бургер справа */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .header__info {
+    width: auto; /* Сбрасываем ограничения, чтобы текст был в одну строку */
+  }
+
+  /* ЛОГОТИП: На ПК он position: absolute. Его надо вернуть в поток, иначе он будет висеть поверх всего */
+  .header__logo {
+    position: static;
+    transform: none;
+    margin: 0 auto; /* Центрируем, если нужно */
+    order: 2; /* Если хочешь управлять порядком */
+  }
+
+  .header__logo img {
+    width: 200px; /* Уменьшаем огромный логотип */
+    height: auto;
+  }
+
+  /* БУРГЕР: Его не было, потому что не было команды его показать */
+  .header__menu-btn {
+    display: block; /* ПОКАЗЫВАЕМ */
+    order: 3;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  /* HERO: Почему текст лежал на картинке? */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 0; /* Сбрасываем отрицательный отступ от ПК */
+  }
+
+  .hero__image {
+    width: 730px;
+    height: 627px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    order: 1; /* Картинка первая */
+  }
+
+  /* КАРТИНКА: У тебя стояло position: absolute, поэтому она вылетала из блока */
+  .hero__image img {
+    position: static; /* ВОЗВРАЩАЕМ В ПОТОК, чтобы она не перекрывала текст */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* КОНТЕНТ: Почему не по центру? */
+  .hero__content {
+    position: static; /* Текст идет под картинкой */
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* На макете планшета текст и кнопка в ряд? Если нет, ставь column */
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    order: 2; /* Текст второй */
+  }
+
+  .hero__title {
+    width: 100%; /* Чтобы текст мог занимать всю ширину */
+    max-width: 418px;
+  }
+}
+
+/* --- ТЕЛЕФОН (320px) --- */
+@media screen and (max-width: 480px) {
+
+  .header__menu-btn img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .hero__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+  }
+
+  .big__text {
+    color: #000;
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 133.333% */
+    text-transform: uppercase;
+  }
+
+  .hero__title--light {
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 166.667% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .hero__cta {
+    width: 69px; /* Кнопка "Work with us" поменьше */
+    height: 69px;
+  }
+
+  .circle {
+    font-size: 10px;
+  }
 }
