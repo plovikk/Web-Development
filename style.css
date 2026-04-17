@@ -221,10 +221,20 @@ body {
 }
 
 .partners__logos {
+  width: 1000px;  
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.partners__track {
   display: flex;
-  width: 1000px;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.is-duplicate {
+  display: none;
 }
 
 .logo-item {
@@ -1393,7 +1403,7 @@ body {
     align-items: flex-end;
     align-self: stretch;
     padding-top: 35px;
-    order: 2; 
+    order: 2;
   }
 
   .hero__title {
@@ -1427,6 +1437,82 @@ body {
   .hero__cta {
     flex-shrink: 0;
   }
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 105px;
+  gap: 20px;
+}
+
+.partners__logos {
+    width: 100%; /* На мобилках на всю ширину */
+    padding: 20px 0;
+  }
+
+  .partners__track {
+    width: max-content; /* Трек становится длинным */
+    justify-content: flex-start;
+    gap: 60px; /* Расстояние между логотипами в ленте */
+    animation: scroll 10s linear infinite; /* Запуск анимации */
+  }
+
+  /* Показываем дубликаты только на мобилках */
+  .is-duplicate {
+    display: block;
+  }
+
+  /* Уменьшаем логотипы для мобилок, если нужно */
+  .partners__track img {
+    height: 94px; 
+    width: auto;
+    flex-shrink: 0;
+  }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Смещаем на половину длины трека */
+  }
+}
+
+
+.about__container {
+    display: grid;
+    /* Создаем две колонки: левая для текста, правая для наград */
+    grid-template-columns: 1fr 1fr; 
+    width: 100%;
+    height: auto;
+    max-width: 730px; /* Как на твоем скриншоте */
+    height: auto;     /* Убираем фиксированную высоту */
+    margin: 72px auto 0;
+    gap: 59px;
+    row-gap: 15px;        /* Расстояние между колонками */
+  }
+
+
+    .about__content {
+      display: contents; 
+    height: auto;
+    width: 100%;
+    /* Вместо space-between ставим прижатие к началу */
+    justify-content: flex-start;
+    gap: 30px; /* Вот это значение теперь регулирует отступ от заголовка до текста под ним */
+  }
+
+  /* 3. Ограничиваем отступ у самого заголовка */
+  .about__holetitle {
+    margin-bottom: 10px; /* Если нужно еще плотнее */
+  }
+
+    .about__holetitle {
+    grid-column: 1 / span 2; 
+    margin-bottom: 20px;
+  }
+
 }
 
 /* --- ТЕЛЕФОН (320px) --- */
@@ -1498,8 +1584,9 @@ body {
     width: 156px;
     height: 89px;
     display: block;
+    top: 50px;
     left: 0;         
-  right: 0; 
+    right: 0; 
   margin: 0 auto;  
   }
 
@@ -1528,14 +1615,13 @@ body {
 
 
   .hero__content {
-    position: static;
-    width: 100%;
     display: flex;
     flex-direction: row; 
     justify-content: space-between;
     align-items: flex-end;
     align-self: stretch;
-    padding-top: 35px;
+    padding-top: 135px;
+
   }
 
   .hero__title {
@@ -1567,8 +1653,10 @@ body {
   }
 
   .hero__cta {
-    display: flex;
+    position: absolute;
     flex-shrink: 0;
+    right: 6px;
+    bottom: 0;
     width: 69px;
     height: 69px;
     flex-direction: column;
@@ -1576,6 +1664,7 @@ body {
     align-items: center;
     border-radius: 88px;
     background: #000;
+    flex-shrink: 0;
   }
 
   .circle {
@@ -1589,4 +1678,50 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 95px;
+  gap: 20px;
+}
+
+.partners__logos {
+    width: 100%; /* На мобилках на всю ширину */
+    padding: 20px 0;
+  }
+
+  
+  .partners__track {
+    width: max-content; /* Трек становится длинным */
+    justify-content: flex-start;
+    gap: 60px; /* Расстояние между логотипами в ленте */
+    animation: scroll 10s linear infinite; /* Запуск анимации */
+  }
+
+  /* Показываем дубликаты только на мобилках */
+  .is-duplicate {
+    display: block;
+  }
+
+  /* Уменьшаем логотипы для мобилок, если нужно */
+  .partners__track img {
+    height: 94px; 
+    width: auto;
+    flex-shrink: 0;
+  }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Смещаем на половину длины трека */
+  }
+}
+
+
+
+
 }
