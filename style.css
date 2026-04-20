@@ -1365,8 +1365,8 @@ body {
 
   .header__menu-btn {
     display: block;
-    background: none; 
-    border: none; 
+    background: none;
+    border: none;
     padding: 0;
     outline: none;
   }
@@ -1380,7 +1380,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-left: 0;
-    margin-top: 0; 
+    margin-top: 0;
   }
 
   .hero__image {
@@ -1389,7 +1389,7 @@ body {
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    margin-top: 206px; 
+    margin-top: 206px;
     overflow: hidden;
     order: 1;
   }
@@ -1398,7 +1398,7 @@ body {
     position: static;
     width: 100%;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     align-self: stretch;
@@ -1419,7 +1419,7 @@ body {
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: 60px; 
+    line-height: 60px;
     text-transform: uppercase;
   }
 
@@ -1438,15 +1438,15 @@ body {
     flex-shrink: 0;
   }
 
-.partners {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 105px;
-  gap: 20px;
-}
+  .partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 105px;
+    gap: 20px;
+  }
 
-.partners__logos {
+  .partners__logos {
     width: 100%; /* На мобилках на всю ширину */
     padding: 20px 0;
   }
@@ -1465,37 +1465,35 @@ body {
 
   /* Уменьшаем логотипы для мобилок, если нужно */
   .partners__track img {
-    height: 94px; 
+    height: 94px;
     width: auto;
     flex-shrink: 0;
   }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Смещаем на половину длины трека */
+    }
   }
-  100% {
-    transform: translateX(-50%); /* Смещаем на половину длины трека */
-  }
-}
 
-
-.about__container {
+  .about__container {
     display: grid;
     /* Создаем две колонки: левая для текста, правая для наград */
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     height: auto;
     max-width: 730px; /* Как на твоем скриншоте */
-    height: auto;     /* Убираем фиксированную высоту */
+    height: auto; /* Убираем фиксированную высоту */
     margin: 72px auto 0;
-    gap: 59px;
-    row-gap: 15px;        /* Расстояние между колонками */
+    column-gap: 59px;
+    row-gap: 15px; /* Расстояние между колонками */
   }
 
-
-    .about__content {
-      display: contents; 
+  .about__content {
+    display: contents;
     height: auto;
     width: 100%;
     /* Вместо space-between ставим прижатие к началу */
@@ -1508,18 +1506,31 @@ body {
     margin-bottom: 10px; /* Если нужно еще плотнее */
   }
 
-    .about__holetitle {
-    grid-column: 1 / span 2; 
+  .about__holetitle {
+    grid-column: 1 / span 2;
     margin-bottom: 20px;
   }
 
+  .about__awards {
+    align-self: start;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 290px; /* Это уменьшит длину линии и придвинет цифры к тексту */
+    align-items: flex-start;
+  }
+
+  .awards-item {
+    width: 290px;
+    justify-content: space-between;
+  }
 }
 
 /* --- ТЕЛЕФОН (320px) --- */
 @media screen and (max-width: 480px) {
   html,
   body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
   }
 
   .container {
@@ -1534,7 +1545,7 @@ body {
     align-items: flex;
   }
 
-  .header__info{
+  .header__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1542,7 +1553,7 @@ body {
     gap: 0px;
   }
 
-  .header__text{
+  .header__text {
     color: #747474;
     font-family: Roboto;
     font-size: 11px;
@@ -1552,7 +1563,7 @@ body {
     align-self: stretch;
   }
 
-  .header__link{
+  .header__link {
     color: #000;
     font-family: Roboto;
     font-size: 11px;
@@ -1570,7 +1581,7 @@ body {
     width: 21px;
     height: 21px;
   }
-  
+
   .header__menu-btn img {
     width: 100%;
     height: 100%;
@@ -1579,49 +1590,46 @@ body {
   }
 
   .header__logo {
-    position: absolute; 
+    position: absolute;
     transform: none;
     width: 156px;
     height: 89px;
     display: block;
     top: 50px;
-    left: 0;         
-    right: 0; 
-  margin: 0 auto;  
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   .header__logo img {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
+    object-fit: contain;
   }
 
   .nav-list {
     display: none;
   }
 
-
   .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 0;
-    margin-top: 0; 
+    margin-top: 0;
   }
 
   .hero__image {
     display: none;
   }
 
-
   .hero__content {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     align-self: stretch;
     padding-top: 135px;
-
   }
 
   .hero__title {
@@ -1647,7 +1655,7 @@ body {
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; 
+    line-height: 40px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
@@ -1674,25 +1682,24 @@ body {
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; 
+    line-height: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
 
-.partners {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 95px;
-  gap: 20px;
-}
+  .partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 95px;
+    gap: 20px;
+  }
 
-.partners__logos {
+  .partners__logos {
     width: 100%; /* На мобилках на всю ширину */
     padding: 20px 0;
   }
 
-  
   .partners__track {
     width: max-content; /* Трек становится длинным */
     justify-content: flex-start;
@@ -1707,21 +1714,17 @@ body {
 
   /* Уменьшаем логотипы для мобилок, если нужно */
   .partners__track img {
-    height: 94px; 
+    height: 94px;
     width: auto;
     flex-shrink: 0;
   }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Смещаем на половину длины трека */
+    }
   }
-  100% {
-    transform: translateX(-50%); /* Смещаем на половину длины трека */
-  }
-}
-
-
-
-
 }
