@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
   font-weight: 100 900;
 }
 
@@ -1727,4 +1727,97 @@ body {
       transform: translateX(-50%); /* Смещаем на половину длины трека */
     }
   }
+
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 304px; /* Ширина по макету */
+    margin: 16px auto 0; /* Отступ 38px от секции выше */
+    height: auto;
+    gap: 77px;
+  }
+
+  /* 2. ЗАГОЛОВОК: центрируем и уменьшаем шрифт */
+  .about__content {
+    display: flex; /* На мобилке contents лучше заменить на flex для контроля */
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+  }
+
+  .about__holetitle {
+    display: flex;
+    
+flex-direction: column;
+justify-content: center;
+align-items: center;
+align-self: stretch;
+    text-align: center;         
+  }
+
+  .about__title {
+    color: #000;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; /* 125% */
+    text-transform: uppercase;
+  }
+
+  .about__subtitle {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px; /* 125% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* 3. ТЕКСТОВОЕ ОПИСАНИЕ */
+  .about__description {
+    width: 100%;
+    text-align: left; /* Сам текст обычно оставляют по левому краю */
+    gap: 21px;
+  }
+
+  .about__text {
+    color: #747474;
+font-family: Roboto;
+font-size: 19px;
+font-style: normal;
+font-weight: 400;
+line-height: 24.7px;
+  }
+
+  /* 4. НАГРАДЫ: растягиваем на всю ширину под текстом */
+  .about__awards {
+    align-self: center;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    max-height: 445px; /* Это уменьшит длину линии и придвинет цифры к тексту */
+    align-items: center;
+    gap: 60px;
+  }
+
+
+  .awards-item {
+    width: 290px;
+    justify-content: space-between;
+  }
+
+
+
+
+
+
 }
