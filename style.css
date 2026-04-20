@@ -530,6 +530,10 @@ body {
   flex-shrink: 0;
 }
 
+.improve__image-tablet{
+  display: none;
+}
+
 .improve__image img {
   width: 100%;
   height: 100%;
@@ -1150,7 +1154,7 @@ body {
   width: 110px;
   height: 63px;
   flex-shrink: 0;
-  /* overflow: hidden; -- добавь это, если не хочешь, чтобы части логотипа вылезали за рамку */
+  
 }
 
 .contact__image img {
@@ -1171,7 +1175,7 @@ body {
   height: 16px;
 }
 
-/* Блок с адресом и кнопкой карты */
+
 .contact__container {
   display: flex;
   justify-content: space-between;
@@ -1240,12 +1244,12 @@ body {
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
-  line-height: 20px; /* 133.333% */
+  line-height: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-/* Блок меню (Sitemap) */
+
 .contact__menu {
   display: flex;
   width: 135px;
@@ -1261,7 +1265,7 @@ body {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 30px; /* 150% */
+  line-height: 30px; 
   text-transform: uppercase;
 }
 
@@ -1284,10 +1288,10 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 23px; /* 127.778% */
+  line-height: 23px; 
 }
 
-/* Блок контактной информации (Телефон/Email) */
+
 .contact__info {
   display: flex;
   flex-direction: column;
@@ -1302,7 +1306,7 @@ body {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 30px; /* 150% */
+  line-height: 30px; 
   text-transform: uppercase;
 }
 
@@ -1319,10 +1323,10 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 27.5px; /* 152.778% */
+  line-height: 27.5px; 
 }
 
-/* Футер (Права и инфо о разработчике) */
+
 .contact__rights {
   display: flex;
   flex-direction: column;
@@ -1447,23 +1451,23 @@ body {
   }
 
   .partners__logos {
-    width: 100%; /* На мобилках на всю ширину */
+    width: 100%;
     padding: 20px 0;
   }
 
   .partners__track {
-    width: max-content; /* Трек становится длинным */
+    width: max-content; 
     justify-content: flex-start;
-    gap: 60px; /* Расстояние между логотипами в ленте */
-    animation: scroll 10s linear infinite; /* Запуск анимации */
+    gap: 60px; 
+    animation: scroll 10s linear infinite; 
   }
 
-  /* Показываем дубликаты только на мобилках */
+
   .is-duplicate {
     display: block;
   }
 
-  /* Уменьшаем логотипы для мобилок, если нужно */
+
   .partners__track img {
     height: 94px;
     width: auto;
@@ -1475,35 +1479,34 @@ body {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%); /* Смещаем на половину длины трека */
+      transform: translateX(-50%); 
     }
   }
 
   .about__container {
     display: grid;
-    /* Создаем две колонки: левая для текста, правая для наград */
+
     grid-template-columns: 1fr 1fr;
     width: 100%;
     height: auto;
-    max-width: 730px; /* Как на твоем скриншоте */
-    height: auto; /* Убираем фиксированную высоту */
+    max-width: 730px; 
+    height: auto; 
     margin: 72px auto 0;
     column-gap: 59px;
-    row-gap: 15px; /* Расстояние между колонками */
+    row-gap: 15px; 
   }
 
   .about__content {
     display: contents;
     height: auto;
     width: 100%;
-    /* Вместо space-between ставим прижатие к началу */
     justify-content: flex-start;
-    gap: 30px; /* Вот это значение теперь регулирует отступ от заголовка до текста под ним */
+    gap: 30px; 
   }
 
-  /* 3. Ограничиваем отступ у самого заголовка */
+
   .about__holetitle {
-    margin-bottom: 10px; /* Если нужно еще плотнее */
+    margin-bottom: 10px; 
   }
 
   .about__holetitle {
@@ -1517,7 +1520,7 @@ body {
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    width: 290px; /* Это уменьшит длину линии и придвинет цифры к тексту */
+    width: 290px; 
     align-items: flex-start;
     gap: 60px;
   }
@@ -1529,20 +1532,20 @@ body {
 
   .works {
     width: 100%;
-    margin: 79px 0;
-    overflow: hidden; /* Чтобы слайды не растягивали экран */
+    margin: 79px 0 0 0;
+    overflow: hidden; 
     padding: 0;
   }
 
-  /* 2. Контейнер, который будет скроллиться */
+
   .works__container {
     display: flex;
-    flex-direction: row; /* Выстраиваем в ряд */
-    overflow-x: auto;    /* Включаем горизонтальную прокрутку */
-    scroll-snap-type: x mandatory; /* ВКЛЮЧАЕМ РЕЖИМ СЛАЙДЕРА */
+    flex-direction: row; 
+    overflow-x: auto;    
+    scroll-snap-type: x mandatory; 
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    padding: 10px 20px 40px 20px;       /* Отступы, чтобы слайды не липли к краям */
+    padding: 10px 20px 40px 20px;       
     gap: 20px;
   }
 
@@ -1553,40 +1556,82 @@ body {
     gap: 8px;
   }
 
-  /* Прячем некрасивую полосу прокрутки */
+
   .works__container::-webkit-scrollbar {
     display: none;
   }
 
-  /* 3. Убираем влияние колонок, чтобы элементы стали в один ряд */
+ 
   .works__column-left, 
   .works__column-right {
-    display: contents; /* Эта магия заставляет детей колонок стать детьми контейнера */
+    display: contents;
   }
 
-  /* 4. Настраиваем каждый отдельный слайд */
+  
   .works__item {
-    flex: 0 0 50%;      /* Слайд занимает 85% ширины экрана (видно край следующего) */
+    flex: 0 0 50%;      
     width: 50%;
-    scroll-snap-align: center; /* Слайд всегда будет магнититься к центру */
+    scroll-snap-align: center;
     gap: 20px;
   }
 
-  /* 5. Картинка внутри слайда */
+
   .works__image {
     width: 100%;
-    height: 400px; /* Фиксируем высоту на планшете */
+    height: 400px; 
   }
 
   .works__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px; /* Можно добавить закругление для красоты */
+    border-radius: 10px; 
   }
 
   .works__caption {
     text-align: center;
+  }
+
+  .improve {
+    flex-direction: column;
+    padding: 44px 20px; 
+    gap: 30px;
+    align-items: center; 
+  }
+
+ 
+  .improve__content {
+    gap: 30px;
+    width: 100%;
+    max-width: 404px; 
+  }
+
+  .improve__title {
+    font-size: 48px; 
+    line-height: 52.8px;
+    text-align: center;
+  }
+
+  .improve__item {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .improve__image{
+    display: none;
+  }
+
+  .improve__image-tablet {
+    display: block !important;
+    width: 90%;            
+    height: auto;            
+    margin: auto 0;      
+  }
+
+  .improve__image-tablet img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
 
@@ -1762,23 +1807,23 @@ body {
   }
 
   .partners__logos {
-    width: 100%; /* На мобилках на всю ширину */
+    width: 100%; 
     padding: 20px 0;
   }
 
   .partners__track {
-    width: max-content; /* Трек становится длинным */
+    width: max-content; 
     justify-content: flex-start;
-    gap: 60px; /* Расстояние между логотипами в ленте */
-    animation: scroll 10s linear infinite; /* Запуск анимации */
+    gap: 60px; 
+    animation: scroll 10s linear infinite; 
   }
 
-  /* Показываем дубликаты только на мобилках */
+
   .is-duplicate {
     display: block;
   }
 
-  /* Уменьшаем логотипы для мобилок, если нужно */
+
   .partners__track img {
     height: 94px;
     width: auto;
@@ -1790,7 +1835,7 @@ body {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%); /* Смещаем на половину длины трека */
+      transform: translateX(-50%); 
     }
   }
 
@@ -1799,15 +1844,15 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 304px; /* Ширина по макету */
-    margin: 16px auto 0; /* Отступ 38px от секции выше */
+    max-width: 304px; 
+    margin: 16px auto 0; 
     height: auto;
     gap: 77px;
   }
 
-  /* 2. ЗАГОЛОВОК: центрируем и уменьшаем шрифт */
+  
   .about__content {
-    display: flex; /* На мобилке contents лучше заменить на flex для контроля */
+    display: flex; 
     flex-direction: column;
     width: 100%;
     gap: 50px;
@@ -1829,7 +1874,7 @@ align-self: stretch;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: 60px; /* 125% */
+    line-height: 60px; 
     text-transform: uppercase;
   }
 
@@ -1840,17 +1885,17 @@ align-self: stretch;
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
-    line-height: 60px; /* 125% */
+    line-height: 60px; 
     letter-spacing: 1px;
     text-transform: uppercase;
     max-width: 100%;
     text-align: center;
   }
 
-  /* 3. ТЕКСТОВОЕ ОПИСАНИЕ */
+
   .about__description {
     width: 100%;
-    text-align: left; /* Сам текст обычно оставляют по левому краю */
+    text-align: left; 
     gap: 21px;
   }
 
@@ -1863,14 +1908,14 @@ font-weight: 400;
 line-height: 24.7px;
   }
 
-  /* 4. НАГРАДЫ: растягиваем на всю ширину под текстом */
+
   .about__awards {
     align-self: center;
     margin-top: 0;
     display: flex;
     flex-direction: column;
     width: 290px;
-    max-height: 445px; /* Это уменьшит длину линии и придвинет цифры к тексту */
+    max-height: 445px; 
     align-items: center;
     gap: 60px;
   }
@@ -1881,18 +1926,18 @@ line-height: 24.7px;
   }
 
   .works {
-    margin: 98px 0;
+    margin: 98px 0 80px 0;
     overflow: hidden; 
   }
 
   .works__container {
     display: flex;
-    flex-direction: row; /* Выстраиваем в ряд */
-    overflow-x: auto;    /* Включаем горизонтальную прокрутку */
-    scroll-snap-type: x mandatory; /* ВКЛЮЧАЕМ РЕЖИМ СЛАЙДЕРА */
+    flex-direction: row; 
+    overflow-x: auto;    
+    scroll-snap-type: x mandatory; 
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    padding: 10px; /* Сверху 0, по бокам 20, снизу 40 (для подписей) */
+    padding: 10px; 
     gap: 20px;
     
     scroll-behavior: smooth;
@@ -1913,7 +1958,7 @@ line-height: 24.7px;
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
-    line-height: 30px; /* 83.333% */
+    line-height: 30px; 
     text-transform: uppercase;
   }
   
@@ -1930,36 +1975,31 @@ text-transform: uppercase;
   .works__container::before,
   .works__container::after {
     content: '';
-    /* Расчет: (100% экрана / 2) - (Ширина слайда 50% / 2) = 25% */
+
     flex: 0 0 25%; 
-    scroll-snap-align: none; /* Пустышки не должны магнититься */
+    scroll-snap-align: none; 
   }
 
   .works__item {
-    /* 1. Уменьшаем саму карточку относительно экрана */
-    /* Было 85%, поставим 65%, чтобы слайд стал визуально меньше */
     flex: 0 0 50%; 
     width: 50%;
     scroll-snap-align: center;
   }
 
   .works__image {
-    width: 100%;        /* Занимает всю ширину карточки */
-    height: auto;       /* УБИРАЕМ фиксированные 240px */
-    
-    /* 2. Задаем пропорции (например, квадрат или прямоугольник) */
-    /* Это сделает высоту зависимой от ширины */
-    aspect-ratio: 0.93 / 1; /* Квадрат. Можно 4/3 или 3/2 для прямоугольника */
+    width: 100%;        
+    height: auto;       
+    aspect-ratio: 0.93 / 1; 
   }
 
   .works__image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Чтобы картинка не искажалась внутри этих пропорций */
+    object-fit: cover;  
     display: block;
   }
 
-  /* Уменьшаем шрифты в подписях */
+
   .works__name {
     font-size: 16px;
     line-height: 16px;
@@ -1970,6 +2010,43 @@ text-transform: uppercase;
     line-height: 23.4px;
   }
 
+  .improve {
+    flex-direction: column;
+    padding: 0 7px 0 7px; 
+    gap: 30px;
+    align-items: center; 
+  }
+
+
+  .improve__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .improve__title {
+    font-size: 36px;
+    line-height: 40px;
+    text-align: left;
+  }
+
+  .improve__item {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .improve__image-tablet 
+  {
+    display: none !important;
+  }
+
+  .improve__image{
+    display: none !important;
+  }
+
+  
 
 
 
