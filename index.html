@@ -60,24 +60,43 @@
             <span class="partners__title--small">FORWARD-THINKING</span>
             STARTUPS
           </h2>
-          
 
           <div class="partners__logos">
-          <div class="partners__track">
-            <!-- Первый набор -->
-            <img src="pictures/iceberglogo.png" alt="Iceberg" />
-            <img src="pictures/visionlogo.png" alt="Vision" />
-            <img src="pictures/homeylogo.png" alt="Homey" />
-            <img src="pictures/riselogo.png" alt="Rise" />
-            <img src="pictures/pinpointlogo.png" alt="PinPoint" />
-            
-            <!-- Второй набор (копия для анимации) -->
-            <img src="pictures/iceberglogo.png" alt="Iceberg" class="is-duplicate" />
-            <img src="pictures/visionlogo.png" alt="Vision" class="is-duplicate" />
-            <img src="pictures/homeylogo.png" alt="Homey" class="is-duplicate" />
-            <img src="pictures/riselogo.png" alt="Rise" class="is-duplicate" />
-            <img src="pictures/pinpointlogo.png" alt="PinPoint" class="is-duplicate" />
-          </div>
+            <div class="partners__track">
+              <!-- Первый набор -->
+              <img src="pictures/iceberglogo.png" alt="Iceberg" />
+              <img src="pictures/visionlogo.png" alt="Vision" />
+              <img src="pictures/homeylogo.png" alt="Homey" />
+              <img src="pictures/riselogo.png" alt="Rise" />
+              <img src="pictures/pinpointlogo.png" alt="PinPoint" />
+
+              <!-- Второй набор (копия для анимации) -->
+              <img
+                src="pictures/iceberglogo.png"
+                alt="Iceberg"
+                class="is-duplicate"
+              />
+              <img
+                src="pictures/visionlogo.png"
+                alt="Vision"
+                class="is-duplicate"
+              />
+              <img
+                src="pictures/homeylogo.png"
+                alt="Homey"
+                class="is-duplicate"
+              />
+              <img
+                src="pictures/riselogo.png"
+                alt="Rise"
+                class="is-duplicate"
+              />
+              <img
+                src="pictures/pinpointlogo.png"
+                alt="PinPoint"
+                class="is-duplicate"
+              />
+            </div>
           </div>
         </section>
 
@@ -261,6 +280,13 @@
           <div class="improve__image">
             <img src="pictures/tablet.png" alt="Tablet showing website" />
           </div>
+
+          <div class="improve__image-tablet">
+            <img
+              src="assets/images/people/tablet.svg"
+              alt="Tablet showing website"
+            />
+          </div>
         </section>
 
         <section class="opinion">
@@ -271,7 +297,7 @@
               <h2 class="opinion__title-text">THINK</h2>
             </div>
             <div class="opinion__cards">
-              <div class="opinion__item">
+              <div class="opinion__item" id="card-1">
                 <p class="opinion__item-phrase">
                   "A designer knows he has achieved perfection not when there is
                   nothing left to add, but when there is nothing left to take
@@ -291,7 +317,7 @@
                 </div>
               </div>
 
-              <div class="opinion__item item-central">
+              <div class="opinion__item item-central" id="card-2">
                 <p class="opinion__item-phrase">
                   "The public is more familiar with bad design than good design.
                   It is, in effect, conditioned to prefer bad design, because
@@ -311,7 +337,7 @@
                 </div>
               </div>
 
-              <div class="opinion__item">
+              <div class="opinion__item" id="card-3">
                 <p class="opinion__item-phrase">
                   "The public is more familiar with bad design than good design.
                   It is, in effect, conditioned to prefer bad design, because
@@ -334,11 +360,9 @@
           </div>
 
           <div class="opinion__slider">
-            <span class="opinion__dot-active"></span>
-            <span class="opinion__dot"></span>
-            <span class="opinion__dot"></span>
-            <span class="opinion__dot"></span>
-            <span class="opinion__dot"></span>
+            <a href="#card-1" class="opinion__dot"></a>
+            <a href="#card-2" class="opinion__dot"></a>
+            <a href="#card-3" class="opinion__dot"></a>
           </div>
         </section>
 
