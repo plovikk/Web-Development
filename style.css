@@ -1692,6 +1692,65 @@ body {
     background: #222; 
     outline: none;
   }
+
+.team {
+    padding-top: 75px; /* Уменьшаем верхний отступ */
+    display: block;    /* Выключаем flex родителя, чтобы блоки не стояли в ряд */
+  }
+
+  .team__container{
+    display:
+    align-items: flex-start;
+  }
+  /* 2. СКРЫВАЕМ КАРТИНКУ */
+  .team__image {
+    display: none !important;
+  }
+
+  /* 3. ЧЕРНЫЙ БЛОК (ЛЕВАЯ СТОРОНА) */
+  .team__side {
+    width: 100% !important;
+    height: auto !important;
+    padding: 90px 20px;
+    display: flex;
+    /* justify-content отвечает за положение ВСЕГО блока на странице */
+    justify-content: center; /* Оставь center, если хочешь чтобы сам блок 451px был в центре экрана */
+    align-items: center; 
+  }
+
+  /* 4. ВНУТРЕННИЙ КОНТЕЙНЕР (ГДЕ ЗАГОЛОВОК) */
+  .team__container {
+    width: 451px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* ИСПРАВЛЕНО: прижимаем заголовок и статистику к левому краю */
+    align-items: flex-start !important; 
+    gap: 60px;
+  }
+
+  /* 5. СТАТИСТИКА */
+  .team__statistics {
+    width: 423px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* ИСПРАВЛЕНО: прижимаем всё внутри к левому краю */
+    align-items: flex-start !important; 
+    gap: 30px;
+  }
+
+  .team__item-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Название слева, % справа */
+  }
+
+  .team__item {
+    width: 100%;
+    justify-content: flex-start; /* Центрируем текст и линии */
+  }
+
 }
 
 /* --- ТЕЛЕФОН (320px) --- */
@@ -2141,6 +2200,107 @@ body {
 
   .opinion__container {
     gap: 32px;
+  }
+
+  .team {
+    padding-top: 40px; /* Отступ сверху от предыдущей секции */
+    display: block;
+  }
+
+  /* Картинку скрываем, как и в планшете */
+  .team__image {
+    display: none !important;
+  }
+
+  /* 2. Черный контейнер */
+  .team__side {
+    width: 100% !important;
+    height: auto !important;
+    background: #000;
+    /* Паддинги из Фигмы: 18.5px сверху/снизу и 16px по бокам */
+    padding: 18.5px 16px !important; 
+    display: flex;
+    justify-content: center; /* Центрируем контент по середине экрана */
+    box-sizing: border-box;
+  }
+
+  /* 3. Внутренняя обертка (288px в Фигме) */
+  .team__container {
+    width: 288px !important;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px; /* Расстояние между заголовком и списком навыков */
+  }
+
+  /* 4. Заголовок OUR TEAM SKILLS */
+  .team__header {
+    display: flex;
+    align-items: baseline; /* Чтобы буквы стояли на одной линии */
+    gap: 10px !important; /* Расстояние между словами в Фигме */
+  }
+
+  .team__header-text {
+    font-size: 36px !important; /* Для "OUR" и "SKILLS" */
+    font-weight: 700;
+    line-height: 72px !important;
+    color: #fff;
+  }
+
+  .team__header-text-light {
+    font-size: 28px !important; /* Для "TEAM" */
+    font-weight: 400;
+    line-height: 72px !important;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+  /* 5. Список навыков */
+  .team__statistics {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    gap: 30px !important; /* Gap между элементами из Фигмы */
+  }
+
+  .team__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Зазор между текстом и полоской */
+  }
+
+  .team__item-text {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .team__item-text-container {
+    font-size: 15px !important; /* Размер названия навыка */
+    line-height: 20px !important;
+  }
+
+  /* 6. Полоски (примерные размеры под ширину 288px) */
+  .team__line-1, .team__line-2, .team__line-3, .team__line-4 {
+    height: 2px !important;
+    background: #fff;
+  }
+
+  .team__line-1 { width: 230px !important; }  /* 80% */
+  .team__line-2 { width: 118px !important; }  /* 41% */
+  .team__line-3 { width: 200px !important; }  /* 70% */
+  .team__line-4 { width: 100% !important; }   /* 100% */
+
+  /* 7. Подпись внизу */
+  .team__caption {
+    font-size: 13px !important; /* Из скриншота */
+    line-height: 23.4px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-align: left;
+    margin-top: 10px;
   }
 
 }
