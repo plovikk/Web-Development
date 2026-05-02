@@ -177,6 +177,12 @@ body {
   align-items: center;
   border-radius: 88px;
   background: #000;
+
+  background: linear-gradient(270deg, #000000, #444444, #222222, #000000);
+  background-size: 600% 600%; /* Делаем фон шире элемента, чтобы было куда двигать */
+  animation: fluidGradient 5s ease infinite; /* Название, время, мягкость, бесконечно */
+  
+  cursor: pointer; /* добавим для удобства */
 }
 
 .circle {
@@ -1343,6 +1349,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 22.1px; /* 130% */
+  animation: smoothFade 4s ease-in-out infinite;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -2024,7 +2031,6 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 88px;
-    background: #000;
     flex-shrink: 0;
   }
 
@@ -2764,5 +2770,31 @@ body {
   100% {
 
     transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/*Анимации*/
+
+
+/*Анимация 1(hero_cta)*/
+@keyframes fluidGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*Анимация 2(.contact__dev-info)*/
+@keyframes smoothFade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
   }
 }
