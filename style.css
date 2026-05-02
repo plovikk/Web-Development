@@ -1747,7 +1747,7 @@ body {
 
   .facts {
     padding-top: 90px;
-    /* gap: 40px; */
+
   }
 
   .is-duplicate {
@@ -1767,17 +1767,15 @@ body {
     align-items: flex-end;
 
     width: 100% !important;
-    max-width: 677px; /* Ширина контента на планшете */
+    max-width: 677px; 
     margin: 0 auto;
 
-    /* Убираем анимацию, которая нужна только телефону */
     animation: none !important;
   }
 
   .facts__item {
     display: flex !important;
     flex-direction: column !important;
-    /* 1. Центрируем иконку и текстовый блок по горизонтали */
     align-items: center !important;
     text-align: center;
     gap: 14px;
@@ -1787,64 +1785,56 @@ body {
   .facts__item-container {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important; /* Центрирует текст внутри колонки */
+    align-items: center !important; 
     width: 100%;
   }
 
-  /* Гарантированно скрываем всё, что больше 4 штук */
   .facts__track .facts__item:nth-child(n + 5) {
     display: none !important;
   }
 
   .blog {
     max-width: 100% !important;
-    padding: 90px 0 0 0 !important; /* Уменьшаем отступ сверху и убираем по бокам */
-    overflow: hidden; /* Чтобы слайды не растягивали экран */
+    padding: 90px 0 0 0 !important; 
+    overflow: hidden; 
     gap: 52px;
   }
 
-  /* 2. Шапка блога (текст и круг) */
+
   .blog__header {
-    padding: 0 20px; /* Добавляем отступы, чтобы заголовок не прилипал к краям */
+    padding: 0 20px; 
     box-sizing: border-box;
   }
 
-  /* 3. КОНТЕЙНЕР С КАРТОЧКАМИ (СЛАЙДЕР) */
   .blog__cards {
     display: flex !important;
-    flex-direction: row !important; /* В одну линию */
-    flex-wrap: nowrap !important; /* Запрещаем перенос */
-    overflow-x: auto; /* Включаем прокрутку */
-    scroll-snap-type: x mandatory; /* Включаем режим слайдера */
+    flex-direction: row !important; 
+    flex-wrap: nowrap !important; 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     justify-content: flex-start !important;
-    gap: 30px; /* Расстояние между карточками */
-    padding-bottom: 20px; /* Место для тени или просто воздух */
+    gap: 30px; 
+    padding-bottom: 20px;
     align-self: stretch;
   }
 
-  /* Прячем полосу прокрутки */
+
   .blog__cards::-webkit-scrollbar {
     display: none;
   }
 
-  /* 4. САМА КАРТОЧКА */
   .blog__item {
-    flex: 0 0 60% !important; /* Карточка занимает 75% ширины экрана */
+    flex: 0 0 60% !important; 
     width: 60% !important;
-    scroll-snap-align: center; /* Магнитим ровно по центру */
+    scroll-snap-align: center; 
 
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Уменьшаем gap между картинкой и текстом */
+    gap: 30px; 
   }
 
-  /* Картинка внутри карточки (пусть подстраивается) */
-  /* .blog__image {
-    height: 300px !important;      
-    width: 100%;
-  } */
 
   .blog__image img {
     width: 100%;
@@ -1853,8 +1843,6 @@ body {
     border-radius: 10px;
   }
 
-  /* 5. РАСПОРКИ (чтобы первая и последняя карточки встали по центру) */
-  /* Формула: (100% экрана - 75% карточки) / 2 = 12.5% */
   .blog__cards::before,
   .blog__cards::after {
     content: "";
@@ -1867,24 +1855,20 @@ body {
   }
 
   .talk__central-contaier {
-    width: 100% !important; /* Сбрасываем 1200px */
+    width: 100% !important;
     max-width: 100% !important;
-    padding: 0 15px; /* Те самые 15px по бокам */
-    box-sizing: border-box; /* Чтобы паддинги не расширяли экран */
+    padding: 0 15px;
+    box-sizing: border-box; 
   }
 
-
-  /* 2. Секция CONTACT (Футер) */
   .contact {
-    width: 100% !important; /* Сбрасываем 1200px */
+    width: 100% !important;
     max-width: 100% !important;
-    padding: 0 15px; /* Те самые 15px по бокам */
-    margin-top: 60px; /* Чуть уменьшим отступ сверху */
+    padding: 0 15px; 
+    margin-top: 60px;
     box-sizing: border-box;
   }
 
-  /* Чтобы иконки соцсетей и логотип не жались, 
-     можно разрешить им перенос, если экран станет совсем узким */
   .contact__socials {
     width: 100% !important;
   }
@@ -2457,7 +2441,7 @@ body {
     width: max-content !important;
     align-items: flex-end;
 
-    /* Добавляем !important, чтобы перебить планшетный animation: none */
+
     animation: factsScroll 3.6s linear infinite !important;
     will-change: transform;
   }
@@ -2468,27 +2452,26 @@ body {
     flex-direction: column;
     align-items: center;
 
-    /* 3. Фиксируем ширину "шага" */
-    /* Теперь каждый блок занимает ровно 180px (140 + 40) */
+
     width: 140px !important;
     margin-right: 40px !important;
 
     box-sizing: border-box;
   }
 
-  /* Прячем дубликаты на больших экранах (добавь это в основной CSS выше медиа-запроса) */
+
   .is-duplicate {
     display: flex !important;
   }
 
   .blog {
-    max-width: 300px !important; /* Ширина по твоему первому скрину */
+    max-width: 300px !important; 
     margin: 80px auto 0 !important;
     padding: 0 !important;
     gap: 30px !important;
   }
 
-  /* 2. ШАПКА БЛОГА */
+
   .blog__header {
     display: flex !important;
     justify-content: space-between !important;
@@ -2498,7 +2481,7 @@ body {
   }
 
   .blog__header-text {
-    font-size: 40px !important; /* Из скриншота */
+    font-size: 40px !important; 
     line-height: 72px !important;
     font-weight: 700;
   }
@@ -2508,29 +2491,29 @@ body {
     font-weight: 400;
   }
 
-  /* Круглая кнопка VIEW ALL */
+
   .blog__header-circle {
-    width: 85px !important; /* Из скриншота */
+    width: 85px !important; 
     height: 85px !important;
     border-radius: 50% !important;
     gap: 0 !important;
   }
 
   .block__header-circle-text {
-    font-size: 11px !important; /* Из скриншота */
+    font-size: 11px !important; 
     line-height: 20px !important;
   }
 
-  /* 3. СЛАЙДЕР (КОНТЕЙНЕР КАРТОЧЕК) */
+
   .blog__cards {
     display: flex !important;
     flex-direction: row !important;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory !important;
-    justify-content: flex-start !important; /* Позволяет скроллить влево */
+    justify-content: flex-start !important;
     align-items: flex-start !important;
-    width: 100vw !important; /* Растягиваем на всю ширину экрана для свайпа */
-    margin-left: -10px; /* Компенсируем центрирование родителя, чтобы слайдер касался краев */
+    width: 100vw !important; 
+    margin-left: -10px; 
     gap: 20px !important;
 
   }
@@ -2539,8 +2522,6 @@ body {
     display: none;
   }
 
-  /* МАГИЯ ЦЕНТРИРОВАНИЯ: невидимые блоки по бокам */
-  /* Расчет: (Экран 100% - Карточка 261px) / 2 */
   .blog__cards::before,
   .blog__cards::after {
     content: "";
@@ -2548,101 +2529,100 @@ body {
     flex-shrink: 0 !important;
   }
 
-  /* 4. САМА КАРТОЧКА (261px) */
+
   .blog__item {
-    flex: 0 0 261px !important; /* ТОЧНАЯ ШИРИНА ИЗ ФИГМЫ */
+    flex: 0 0 261px !important; 
     width: 261px !important;
     scroll-snap-align: center !important;
-    gap: 0 !important; /* Убираем общий gap, будем задавать отступы индивидуально */
+    gap: 0 !important; 
   }
 
   .blog__image {
     width: 261px !important;
-    height: 267px !important; /* ТОЧНЫЙ РАЗМЕР ИЗ ФИГМЫ */
-    margin-bottom: 24px !important; /* Отступ 24 до Label */
+    height: 267px !important; 
+    margin-bottom: 24px !important; 
   }
 
   .blog__image img {
     border-radius: 12px;
   }
 
-  /* Метка (DESIGN / MARKETING) */
+
   .blog__card-lable {
-    margin-bottom: 23px !important; /* Отступ 20 до заголовка */
+    margin-bottom: 23px !important; 
     padding: 5px 12px !important;
     width: fit-content;
   }
 
-  /* Заголовок статьи */
   .blog__card-description {
-    margin-bottom: 20px !important; /* Отступ 20 до даты */
+    margin-bottom: 20px !important;
     gap: 0 !important;
   }
 
   .blog__card-description-line {
-    font-size: 20px !important; /* Из скриншота */
+    font-size: 20px !important; 
     line-height: 31.2px !important;
     display: block;
   }
 
-  /* Дата */
+
   .blog__card-date {
     font-size: 16px !important;
   }
 
   .talk {
     margin-top: 50px !important;
-    padding: 0 !important; /* Убираем паддинги, чтобы черный блок прижался ближе к краям */
-    width: 100%; /* Убираем лишние паддинги */
+    padding: 0 !important; 
+    width: 100%; 
   }
 
   .talk__central-contaier {
-    width: 306px !important; /* ТОЧНАЯ ШИРИНА ИЗ ФИГМЫ */
-    height: 280px !important; /* Высота черного блока на мобилке */
+    width: 306px !important; 
+    height: 280px !important; 
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    margin: 0 auto !important; /* Центрируем блок, чтобы отступы были по 7px с обоих сторон */
+    margin: 0 auto !important; 
     padding: 0 !important;
   }
 
-  /* 2. ТЕКСТОВЫЙ БЛОК (Слева) */
+
   .talk__text-container {
-    /* Из скриншота */
+  
     gap: 10px !important;
     margin: 0 !important;
-    width: auto !important; /* Зазор между "LET'S TALK" и подписью */
+    width: auto !important;
   }
 
   .talk__main-text {
-    gap: 8px !important; /* Расстояние между словами */
-    align-items: baseline !important; /* Чтобы буквы стояли на одной линии */
+    gap: 8px !important; 
+    align-items: baseline !important; 
   }
 
   .talk__text-bold {
-    font-size: 40px !important; /* Из скриншота */
+    font-size: 40px !important; 
     line-height: 55px !important;
   }
 
   .talk__text-light {
-    font-size: 32px !important; /* Из скриншота */
+    font-size: 32px !important; 
     line-height: 55px !important;
   }
 
   .talk__contact-text {
-    font-size: 16px !important; /* Из скриншота */
+    font-size: 16px !important; 
     line-height: 25.2px !important;
-    opacity: 0.5; /* 50% прозрачности из Фигмы */
+    opacity: 0.5; 
   }
 
-  /* 3. КРУГЛАЯ КНОПКА (Справа) */
-  .talk__circle {
-    display: flex !important; /* Гарантируем видимость */
-    flex-shrink: 0 !important; /* ЗАПРЕЩАЕМ ему сжиматься, иначе он исчезнет */
 
-    width: 85px !important; /* Твой размер из Фигмы */
+  .talk__circle {
+    display: flex !important;
+    flex-shrink: 0 !important; 
+
+    width: 85px !important; 
     height: 85px !important;
-    background: #fff; /* Цвет из макета */
+    background: #fff; 
     border-radius: 50%;
 
     flex-direction: column;
@@ -2651,28 +2631,27 @@ body {
     margin: 0 !important;
   }
 
-  /* 2. Текст внутри кружочка */
+
   .talk__circle-text {
-    color: #000 !important; /* Чтобы текст был виден на белом фоне */
-    font-size: 10px !important; /* Размер как в Фигме */
+    color: #000 !important; 
+    font-size: 10px !important; 
     line-height: 12px;
     text-align: center;
   }
 
-  /* 3. Ограничиваем ширину текста, чтобы он не выталкивал круг */
   .talk__text-container {
-    flex-shrink: 1; /* Тексту разрешаем сжиматься, если места мало */
+    flex-shrink: 1; 
     width: auto !important;
   }
 
   .contact {
-    width: 306px !important; /* 320px - 7px - 7px */
+    width: 306px !important;
     margin: 90px auto 0 !important;
     padding: 0 !important;
-    gap: 43px !important; /* Зазор между соцсетями и основным блоком */
+    gap: 43px !important; 
   }
 
-  /* 2. Блок соцсетей (Лого + Иконки) */
+
   .contact__socials {
     display: flex !important;
     justify-content: space-between !important;
@@ -2687,20 +2666,20 @@ body {
 
   .contact__apps {
     display: flex !important;
-    gap: 16px !important; /* Зазор между иконками из Фигмы */
+    gap: 16px !important; 
     width: 144px !important;
     justify-content: flex-end;
   }
 
-  /* 3. Основной контейнер (Сетка) */
+
   .contact__container {
     display: flex !important;
-    flex-wrap: wrap !important; /* Позволяет Контактам упасть вниз */
+    flex-wrap: wrap !important; 
     justify-content: space-between !important;
     align-items: stretch;
   }
 
-  /* Блок Адреса (слева) */
+
   .contact__address {
     display: flex;
     flex-direction: column;
@@ -2710,7 +2689,7 @@ body {
   .contact__address-bold,
   .contact__menu-map,
   .contact__info-text {
-    font-size: 16px !important; /* Из Фигмы */
+    font-size: 16px !important;
     line-height: 20px !important;
     margin-bottom: 10px !important;
   }
@@ -2720,23 +2699,21 @@ body {
     line-height: 18px !important;
   }
 
-  /* Кнопка "FIND ON MAP" */
   .contact__address-button {
     margin-top: auto !important;
-    width: 116px !important; /* Из Фигмы */
+    width: 116px !important; 
     height: 44px !important;
     border-radius: 30px !important;
     padding: 0 !important;
   }
 
   .contact__address-button-text {
-    font-size: 11px !important; /* Из Фигмы */
+    font-size: 11px !important; 
     letter-spacing: 1px;
   }
 
-  /* Блок Sitemap (справа) */
   .contact__menu {
-    width: 110px !important; /* Из Фигмы */
+    width: 110px !important; 
     height: auto !important;
   }
 
@@ -2749,10 +2726,9 @@ body {
     line-height: 23px !important;
   }
 
-  /* Блок контактов (ПАДАЕТ ВНИЗ) */
   .contact__info {
-    width: 100% !important; /* На всю ширину, чтобы вытолкнуть на новую строку */
-    margin-top: 40px !important; /* Отступ сверху от линии адреса */
+    width: 100% !important;
+    margin-top: 40px !important;
     display: flex !important;
     flex-direction: column !important;
   }
@@ -2762,7 +2738,6 @@ body {
     line-height: 18px !important;
   }
 
-  /* 4. Копирайт (самый низ) */
   .contact__rights {
     margin-top: 40px !important;
     padding-bottom: 20px;
@@ -2779,7 +2754,6 @@ body {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    /* Смещение ровно на половину длины трека (на 4 элемента) */
     transform: translate3d(-50%, 0, 0);
   }
 }
