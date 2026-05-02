@@ -825,6 +825,10 @@ body {
   gap: 45px;
 }
 
+.is-duplicate {
+  display: none;
+}
+
 .facts__header-text {
   display: flex;
   justify-content: center;
@@ -1637,42 +1641,38 @@ body {
     flex-wrap: wrap;
   }
 
-
   .opinion__cards {
     display: flex !important;
     flex-direction: row !important;
     overflow-x: auto;
-    scroll-snap-type: x mandatory; 
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 
-    height: auto !important; 
+    height: auto !important;
   }
 
   .opinion__cards::-webkit-scrollbar {
     display: none;
   }
 
-
   .opinion__item {
-    flex: 0 0 55%; 
+    flex: 0 0 55%;
     width: 55%;
     height: auto !important;
-    min-height: 350px; 
+    min-height: 350px;
 
-    scroll-snap-align: center; 
-    opacity: 1 !important; 
-    padding: 30px 20px !important; 
+    scroll-snap-align: center;
+    opacity: 1 !important;
+    padding: 30px 20px !important;
     box-sizing: border-box;
   }
-
 
   .opinion__cards::before,
   .opinion__cards::after {
     content: "";
-    flex: 0 0 22.5%; 
+    flex: 0 0 22.5%;
   }
-
 
   .opinion__slider {
     margin-top: 0px;
@@ -1683,22 +1683,22 @@ body {
     width: 10px;
     height: 10px;
     background: rgba(34, 34, 34, 0.4);
-    text-decoration: none; 
+    text-decoration: none;
     transition: background 0.3s;
   }
 
   .opinion__dot:hover,
   .opinion__dot:focus {
-    background: #222; 
+    background: #222;
     outline: none;
   }
 
   .team {
     padding-top: 75px;
-    display: block;    
+    display: block;
   }
 
-  .team__container{
+  .team__container {
     display: flex;
     align-items: flex-start;
   }
@@ -1707,14 +1707,13 @@ body {
     display: none !important;
   }
 
-
   .team__side {
     width: 100% !important;
     height: auto !important;
     padding: 90px 20px;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
   }
 
   .team__container {
@@ -1722,24 +1721,23 @@ body {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start !important; 
+    align-items: flex-start !important;
     gap: 60px;
   }
-
 
   .team__statistics {
     width: 423px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start !important; 
+    align-items: flex-start !important;
     gap: 30px;
   }
 
   .team__item-text {
     width: 100%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
   }
 
   .team__item {
@@ -1747,9 +1745,149 @@ body {
     justify-content: flex-start;
   }
 
+  .facts {
+    padding-top: 90px;
+    /* gap: 40px; */
+  }
 
-  
+  .is-duplicate {
+    display: none !important;
+  }
 
+  .facts__achievements {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .facts__track {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 100% !important;
+    max-width: 677px; /* Ширина контента на планшете */
+    margin: 0 auto;
+
+    /* Убираем анимацию, которая нужна только телефону */
+    animation: none !important;
+  }
+
+  .facts__item {
+    display: flex !important;
+    flex-direction: column !important;
+    /* 1. Центрируем иконку и текстовый блок по горизонтали */
+    align-items: center !important;
+    text-align: center;
+    gap: 14px;
+    flex-shrink: 0;
+  }
+
+  .facts__item-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Центрирует текст внутри колонки */
+    width: 100%;
+  }
+
+  /* Гарантированно скрываем всё, что больше 4 штук */
+  .facts__track .facts__item:nth-child(n + 5) {
+    display: none !important;
+  }
+
+  .blog {
+    max-width: 100% !important;
+    padding: 90px 0 0 0 !important; /* Уменьшаем отступ сверху и убираем по бокам */
+    overflow: hidden; /* Чтобы слайды не растягивали экран */
+    gap: 52px;
+  }
+
+  /* 2. Шапка блога (текст и круг) */
+  .blog__header {
+    padding: 0 20px; /* Добавляем отступы, чтобы заголовок не прилипал к краям */
+    box-sizing: border-box;
+  }
+
+  /* 3. КОНТЕЙНЕР С КАРТОЧКАМИ (СЛАЙДЕР) */
+  .blog__cards {
+    display: flex !important;
+    flex-direction: row !important; /* В одну линию */
+    flex-wrap: nowrap !important; /* Запрещаем перенос */
+    overflow-x: auto; /* Включаем прокрутку */
+    scroll-snap-type: x mandatory; /* Включаем режим слайдера */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start !important;
+    gap: 30px; /* Расстояние между карточками */
+    padding-bottom: 20px; /* Место для тени или просто воздух */
+    align-self: stretch;
+  }
+
+  /* Прячем полосу прокрутки */
+  .blog__cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 4. САМА КАРТОЧКА */
+  .blog__item {
+    flex: 0 0 60% !important; /* Карточка занимает 75% ширины экрана */
+    width: 60% !important;
+    scroll-snap-align: center; /* Магнитим ровно по центру */
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Уменьшаем gap между картинкой и текстом */
+  }
+
+  /* Картинка внутри карточки (пусть подстраивается) */
+  /* .blog__image {
+    height: 300px !important;      
+    width: 100%;
+  } */
+
+  .blog__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* 5. РАСПОРКИ (чтобы первая и последняя карточки встали по центру) */
+  /* Формула: (100% экрана - 75% карточки) / 2 = 12.5% */
+  .blog__cards::before,
+  .blog__cards::after {
+    content: "";
+    flex: 0 0 12.5%;
+    display: block;
+  }
+
+  .talk{
+    margin-top: 100px;
+  }
+
+  .talk__central-contaier {
+    width: 100% !important; /* Сбрасываем 1200px */
+    max-width: 100% !important;
+    padding: 0 15px; /* Те самые 15px по бокам */
+    box-sizing: border-box; /* Чтобы паддинги не расширяли экран */
+  }
+
+
+  /* 2. Секция CONTACT (Футер) */
+  .contact {
+    width: 100% !important; /* Сбрасываем 1200px */
+    max-width: 100% !important;
+    padding: 0 15px; /* Те самые 15px по бокам */
+    margin-top: 60px; /* Чуть уменьшим отступ сверху */
+    box-sizing: border-box;
+  }
+
+  /* Чтобы иконки соцсетей и логотип не жались, 
+     можно разрешить им перенос, если экран станет совсем узким */
+  .contact__socials {
+    width: 100% !important;
+  }
 }
 
 /* --- ТЕЛЕФОН (320px) --- */
@@ -2153,13 +2291,13 @@ body {
     display: none !important;
   }
 
-  .opinion{
+  .opinion {
     padding-top: 77px;
     gap: 25px;
   }
 
   .opinion__title-text {
-    font-size: 32px !important; 
+    font-size: 32px !important;
     line-height: 1.1 !important;
   }
 
@@ -2168,17 +2306,15 @@ body {
     line-height: 1.1 !important;
   }
 
-
   .opinion__item-phrase {
-    font-size: 19px !important; 
+    font-size: 19px !important;
     line-height: 1.4 !important;
   }
 
-  
   .opinion__item {
-    height: auto !important;      
-    min-height: auto !important;     
-    gap: 12px !important; 
+    height: auto !important;
+    min-height: auto !important;
+    gap: 12px !important;
 
     flex: 0 0 92% !important;
     width: 92% !important;
@@ -2202,7 +2338,7 @@ body {
   }
 
   .team {
-    padding-top: 72px; 
+    padding-top: 72px;
     display: block;
   }
 
@@ -2214,12 +2350,11 @@ body {
     width: 100% !important;
     height: auto !important;
     background: #000;
-    padding: 18.5px 16px !important; 
+    padding: 18.5px 16px !important;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     box-sizing: border-box;
   }
-
 
   .team__container {
     width: 288px !important;
@@ -2230,34 +2365,32 @@ body {
     gap: 45px;
   }
 
- 
   .team__header {
     display: flex;
-    align-items: baseline; 
-    gap: 10px !important; 
+    align-items: baseline;
+    gap: 10px !important;
   }
 
   .team__header-text {
-    font-size: 36px !important; 
+    font-size: 36px !important;
     font-weight: 700;
     line-height: 72px !important;
     color: #fff;
   }
 
   .team__header-text-light {
-    font-size: 28px !important; 
+    font-size: 28px !important;
     font-weight: 400;
     line-height: 72px !important;
     letter-spacing: 1px;
     color: #fff;
   }
 
- 
   .team__statistics {
     width: 100% !important;
     display: flex;
     flex-direction: column;
-    gap: 30px !important; 
+    gap: 30px !important;
   }
 
   .team__item {
@@ -2265,7 +2398,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px; 
+    gap: 10px;
   }
 
   .team__item-text {
@@ -2275,20 +2408,30 @@ body {
   }
 
   .team__item-text-container {
-    font-size: 15px !important; 
+    font-size: 15px !important;
     line-height: 20px !important;
   }
 
-
-  .team__line-1, .team__line-2, .team__line-3, .team__line-4 {
+  .team__line-1,
+  .team__line-2,
+  .team__line-3,
+  .team__line-4 {
     height: 2px !important;
     background: #fff;
   }
 
-  .team__line-1 { width: 230px !important; }  
-  .team__line-2 { width: 118px !important; }  
-  .team__line-3 { width: 200px !important; }  
-  .team__line-4 { width: 100% !important; }   
+  .team__line-1 {
+    width: 230px !important;
+  }
+  .team__line-2 {
+    width: 118px !important;
+  }
+  .team__line-3 {
+    width: 200px !important;
+  }
+  .team__line-4 {
+    width: 100% !important;
+  }
 
   .team__caption {
     font-size: 13px !important;
@@ -2297,10 +2440,346 @@ body {
     text-align: left;
   }
 
+  .facts {
+    padding-top: 90px;
+    gap: 35px;
+  }
 
+  .facts__achievements {
+    display: block !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
 
+  .facts__track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    align-items: flex-end;
 
+    /* Добавляем !important, чтобы перебить планшетный animation: none */
+    animation: factsScroll 3.6s linear infinite !important;
+    will-change: transform;
+  }
 
+  .facts__item {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
 
+    /* 3. Фиксируем ширину "шага" */
+    /* Теперь каждый блок занимает ровно 180px (140 + 40) */
+    width: 140px !important;
+    margin-right: 40px !important;
 
+    box-sizing: border-box;
+  }
+
+  /* Прячем дубликаты на больших экранах (добавь это в основной CSS выше медиа-запроса) */
+  .is-duplicate {
+    display: flex !important;
+  }
+
+  .blog {
+    max-width: 300px !important; /* Ширина по твоему первому скрину */
+    margin: 80px auto 0 !important;
+    padding: 0 !important;
+    gap: 30px !important;
+  }
+
+  /* 2. ШАПКА БЛОГА */
+  .blog__header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .blog__header-text {
+    font-size: 40px !important; /* Из скриншота */
+    line-height: 72px !important;
+    font-weight: 700;
+  }
+
+  .blog__header-text-light {
+    font-size: 40px !important;
+    font-weight: 400;
+  }
+
+  /* Круглая кнопка VIEW ALL */
+  .blog__header-circle {
+    width: 85px !important; /* Из скриншота */
+    height: 85px !important;
+    border-radius: 50% !important;
+    gap: 0 !important;
+  }
+
+  .block__header-circle-text {
+    font-size: 11px !important; /* Из скриншота */
+    line-height: 20px !important;
+  }
+
+  /* 3. СЛАЙДЕР (КОНТЕЙНЕР КАРТОЧЕК) */
+  .blog__cards {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    justify-content: flex-start !important; /* Позволяет скроллить влево */
+    align-items: flex-start !important;
+    width: 100vw !important; /* Растягиваем на всю ширину экрана для свайпа */
+    margin-left: -10px; /* Компенсируем центрирование родителя, чтобы слайдер касался краев */
+    gap: 20px !important;
+
+  }
+
+  .blog__cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* МАГИЯ ЦЕНТРИРОВАНИЯ: невидимые блоки по бокам */
+  /* Расчет: (Экран 100% - Карточка 261px) / 2 */
+  .blog__cards::before,
+  .blog__cards::after {
+    content: "";
+    flex: 0 0 calc((100vw - 261px) / 2);
+    flex-shrink: 0 !important;
+  }
+
+  /* 4. САМА КАРТОЧКА (261px) */
+  .blog__item {
+    flex: 0 0 261px !important; /* ТОЧНАЯ ШИРИНА ИЗ ФИГМЫ */
+    width: 261px !important;
+    scroll-snap-align: center !important;
+    gap: 0 !important; /* Убираем общий gap, будем задавать отступы индивидуально */
+  }
+
+  .blog__image {
+    width: 261px !important;
+    height: 267px !important; /* ТОЧНЫЙ РАЗМЕР ИЗ ФИГМЫ */
+    margin-bottom: 24px !important; /* Отступ 24 до Label */
+  }
+
+  .blog__image img {
+    border-radius: 12px;
+  }
+
+  /* Метка (DESIGN / MARKETING) */
+  .blog__card-lable {
+    margin-bottom: 23px !important; /* Отступ 20 до заголовка */
+    padding: 5px 12px !important;
+    width: fit-content;
+  }
+
+  /* Заголовок статьи */
+  .blog__card-description {
+    margin-bottom: 20px !important; /* Отступ 20 до даты */
+    gap: 0 !important;
+  }
+
+  .blog__card-description-line {
+    font-size: 20px !important; /* Из скриншота */
+    line-height: 31.2px !important;
+    display: block;
+  }
+
+  /* Дата */
+  .blog__card-date {
+    font-size: 16px !important;
+  }
+
+  .talk {
+    margin-top: 50px !important;
+    padding: 0 !important; /* Убираем паддинги, чтобы черный блок прижался ближе к краям */
+    width: 100%; /* Убираем лишние паддинги */
+  }
+
+  .talk__central-contaier {
+    width: 306px !important; /* ТОЧНАЯ ШИРИНА ИЗ ФИГМЫ */
+    height: 280px !important; /* Высота черного блока на мобилке */
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin: 0 auto !important; /* Центрируем блок, чтобы отступы были по 7px с обоих сторон */
+    padding: 0 !important;
+  }
+
+  /* 2. ТЕКСТОВЫЙ БЛОК (Слева) */
+  .talk__text-container {
+    /* Из скриншота */
+    gap: 10px !important;
+    margin: 0 !important;
+    width: auto !important; /* Зазор между "LET'S TALK" и подписью */
+  }
+
+  .talk__main-text {
+    gap: 8px !important; /* Расстояние между словами */
+    align-items: baseline !important; /* Чтобы буквы стояли на одной линии */
+  }
+
+  .talk__text-bold {
+    font-size: 40px !important; /* Из скриншота */
+    line-height: 55px !important;
+  }
+
+  .talk__text-light {
+    font-size: 32px !important; /* Из скриншота */
+    line-height: 55px !important;
+  }
+
+  .talk__contact-text {
+    font-size: 16px !important; /* Из скриншота */
+    line-height: 25.2px !important;
+    opacity: 0.5; /* 50% прозрачности из Фигмы */
+  }
+
+  /* 3. КРУГЛАЯ КНОПКА (Справа) */
+  .talk__circle {
+    display: flex !important; /* Гарантируем видимость */
+    flex-shrink: 0 !important; /* ЗАПРЕЩАЕМ ему сжиматься, иначе он исчезнет */
+
+    width: 85px !important; /* Твой размер из Фигмы */
+    height: 85px !important;
+    background: #fff; /* Цвет из макета */
+    border-radius: 50%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+  }
+
+  /* 2. Текст внутри кружочка */
+  .talk__circle-text {
+    color: #000 !important; /* Чтобы текст был виден на белом фоне */
+    font-size: 10px !important; /* Размер как в Фигме */
+    line-height: 12px;
+    text-align: center;
+  }
+
+  /* 3. Ограничиваем ширину текста, чтобы он не выталкивал круг */
+  .talk__text-container {
+    flex-shrink: 1; /* Тексту разрешаем сжиматься, если места мало */
+    width: auto !important;
+  }
+
+  .contact {
+    width: 306px !important; /* 320px - 7px - 7px */
+    margin: 90px auto 0 !important;
+    padding: 0 !important;
+    gap: 43px !important; /* Зазор между соцсетями и основным блоком */
+  }
+
+  /* 2. Блок соцсетей (Лого + Иконки) */
+  .contact__socials {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .contact__image {
+    width: 110px !important;
+    height: auto !important;
+  }
+
+  .contact__apps {
+    display: flex !important;
+    gap: 16px !important; /* Зазор между иконками из Фигмы */
+    width: 144px !important;
+    justify-content: flex-end;
+  }
+
+  /* 3. Основной контейнер (Сетка) */
+  .contact__container {
+    display: flex !important;
+    flex-wrap: wrap !important; /* Позволяет Контактам упасть вниз */
+    justify-content: space-between !important;
+    align-items: stretch;
+  }
+
+  /* Блок Адреса (слева) */
+  .contact__address {
+    display: flex;
+    flex-direction: column;
+    width: 157px;
+  }
+
+  .contact__address-bold,
+  .contact__menu-map,
+  .contact__info-text {
+    font-size: 16px !important; /* Из Фигмы */
+    line-height: 20px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contact__address-light {
+    font-size: 15px !important;
+    line-height: 18px !important;
+  }
+
+  /* Кнопка "FIND ON MAP" */
+  .contact__address-button {
+    margin-top: auto !important;
+    width: 116px !important; /* Из Фигмы */
+    height: 44px !important;
+    border-radius: 30px !important;
+    padding: 0 !important;
+  }
+
+  .contact__address-button-text {
+    font-size: 11px !important; /* Из Фигмы */
+    letter-spacing: 1px;
+  }
+
+  /* Блок Sitemap (справа) */
+  .contact__menu {
+    width: 110px !important; /* Из Фигмы */
+    height: auto !important;
+  }
+
+  .contact__navigation-list {
+    gap: 0 !important;
+  }
+
+  .contact__navigation-item-text {
+    font-size: 15px !important;
+    line-height: 23px !important;
+  }
+
+  /* Блок контактов (ПАДАЕТ ВНИЗ) */
+  .contact__info {
+    width: 100% !important; /* На всю ширину, чтобы вытолкнуть на новую строку */
+    margin-top: 40px !important; /* Отступ сверху от линии адреса */
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .contact__info-data {
+    font-size: 15px !important;
+    line-height: 18px !important;
+  }
+
+  /* 4. Копирайт (самый низ) */
+  .contact__rights {
+    margin-top: 40px !important;
+    padding-bottom: 20px;
+  }
+
+  .contact__dev-info {
+    font-size: 12px !important;
+    text-align: left;
+  }
+}
+
+@keyframes factsScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    /* Смещение ровно на половину длины трека (на 4 элемента) */
+    transform: translate3d(-50%, 0, 0);
+  }
 }
