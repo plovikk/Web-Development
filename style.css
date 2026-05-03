@@ -2898,6 +2898,24 @@ body {
   animation: blurPulse 5s ease-in-out infinite;
 }
 
+/* Анимация 8 - Тень (Box-shadow Ease-in) opinio section */
+@keyframes shadowPulse {
+  0%, 100% { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  50% { box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+}
+.opinion__item {
+  animation: shadowPulse 6s ease-in infinite;
+}
+
+/* Анимация 9 - Горизонтальное перемещение (translateX Pulse) header */
+@keyframes horizontalPulse {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(15px); }
+}
+.header__info {
+  animation: horizontalPulse 5s ease-in-out infinite;
+}
+
 
 
 
