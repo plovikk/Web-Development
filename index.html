@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roby Agency</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header container">
+      <div class="header__info">
+        <p class="header__text">A creative agency based in Helsinki.</p>
+        <a href="mailto:hello@robi.com" class="header__link">hello@robi.com</a>
+      </div>
+      <div class="header__logo">
+        <img src="pictures/roby-logo.png" alt="Roby Logo" />
+      </div>
+
+      <input type="checkbox" id="menu-toggle" hidden />
+
+      <!-- Кнопка теперь является лейблом для этого чекбокса -->
+      <label for="menu-toggle" class="header__menu-btn">
+        <img src="pictures/burger.svg" alt="Menu" />
+      </label>
+
+      <ul class="nav-list">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+        <li><a href="#" class="nav-link">News</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+        <li>
+          <a href="#" class="nav-link"> Cart(<span>0</span>) </a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero__image">
+          <img src="pictures/man.jpg" alt="Man writing in a notebook" />
+        </div>
+
+        <div class="hero__content">
+          <h1 class="hero__title big__text">
+            <span>“WE BELIEVE THAT</span>
+            <span class="hero__title--light">THE POWER OF DESIGN</span>
+            <span>HELPS</span>
+            <span>BUSINESSES.”</span>
+          </h1>
+          <div class="hero__cta">
+            <p class="circle">WORK</p>
+            <p class="circle">WITH US</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners container">
+        <h2 class="partners__title">
+          WE PARTNER WITH
+          <span class="partners__title--small">FORWARD-THINKING</span>
+          STARTUPS
+        </h2>
+
+        <div class="partners__logos">
+          <div class="partners__track">
+            <!-- Первый набор -->
+            <img src="pictures/iceberglogo.png" alt="Iceberg" />
+            <img src="pictures/visionlogo.png" alt="Vision" />
+            <img src="pictures/homeylogo.png" alt="Homey" />
+            <img src="pictures/riselogo.png" alt="Rise" />
+            <img src="pictures/pinpointlogo.png" alt="PinPoint" />
+
+            <!-- Второй набор (копия для анимации) -->
+            <img src="pictures/iceberglogo.png" alt="Iceberg" class="is-duplicate" />
+            <img src="pictures/visionlogo.png" alt="Vision" class="is-duplicate" />
+            <img src="pictures/homeylogo.png" alt="Homey" class="is-duplicate" />
+            <img src="pictures/riselogo.png" alt="Rise" class="is-duplicate" />
+            <img src="pictures/pinpointlogo.png" alt="PinPoint" class="is-duplicate" />
+          </div>
+        </div>
+      </section>
+
+      <section class="about__container">
+        <div class="about__content">
+          <div class="about__holetitle">
+            <h2 class="about__title">THE PERFECT</h2>
+            <h3 class="about__subtitle">AGENCY FOR YOUR BRAND</h3>
+          </div>
+          <div class="about__description">
+            <p class="about__text">
+              We love what we do and create partnerships with our clients to
+              ensure their digital transformation is positioned for long-term
+              success.
+            </p>
+            <p class="about__text">
+              We believe that the human dimensions essential to start any
+              successful project and that this is where splendid emotional
+              relationships between the company and people are born.
+            </p>
+          </div>
+        </div>
+
+        <div class="about__awards">
+          <div class="awards__block">
+            <div class="awards-block__header">
+              <h4 class="awards-block__title">AWARDS</h4>
+              <h4 class="awards-block__title">14</h4>
+            </div>
+            <hr class="awards__line" />
+            <ul class="awards-list">
+              <li class="awards-item">
+                <span class="awards-item__name">Site of the Day</span>
+                <span class="awards-item__name">3</span>
+              </li>
+              <li class="awards-item">
+                <span class="awards-item__name">Developer Award</span>
+                <span class="awards-item__name">1</span>
+              </li>
+              <li class="awards-item">
+                <span class="awards-item__name">Honorable Mention</span>
+                <span class="awards-item__name">7</span>
+              </li>
+              <li class="awards-item">
+                <span class="awards-item__name">Mobile Exelence</span>
+                <span class="awards-item__name">3</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="awards__block">
+            <div class="awards-block__header">
+              <h4 class="awards-block__title">CSS DESIGN AWARDS</h4>
+              <h4 class="awards-block__title">34</h4>
+            </div>
+            <hr class="awards__line" />
+            <ul class="awards-list">
+              <li class="awards-item">
+                <span class="awards-item__name">UX Design Award</span>
+                <span class="awards-item__name">10</span>
+              </li>
+              <li class="awards-item">
+                <span class="awards-item__name">UI Design Award</span>
+                <span class="awards-item__name">4</span>
+              </li>
+              <li class="awards-item">
+                <span class="awards-item__name">Innovation Design Award</span>
+                <span class="awards-item__name">7</span>
+              </li>
+              <li class="awards-item">
+                <span class="awards-item__name">Website of the Day</span>
+                <span class="awards-item__name">13</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="works">
+        <div class="works-title">
+          <h2 class="works__title--bold">
+            SELECTED <span class="works__title--light">WORK</span>
+          </h2>
+        </div>
+        <div class="works__container">
+          <div class="works__column-left">
+            <div class="works__item">
+              <div class="works__image">
+                <img src="pictures/bicycle.png" alt="Conference" />
+              </div>
+              <div class="works__caption">
+                <p class="works__name">CONFERENCE</p>
+                <p class="works__category">Art Direction, Design</p>
+              </div>
+            </div>
+
+            <div class="works__item">
+              <div class="works__image">
+                <img src="pictures/black_man.png" alt="Ivor Application" />
+              </div>
+              <div class="works__caption">
+                <p class="works__name">IVOR APPLICATION</p>
+                <p class="works__category">User Interface</p>
+              </div>
+            </div>
+
+            <div class="works__item">
+              <div class="works__image">
+                <img src="pictures/home.png" alt="Flying to the moon" />
+              </div>
+              <div class="works__caption">
+                <p class="works__name">FLYING TO THE MOON</p>
+                <p class="works__category">User Experiences</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="works__column-right">
+            <div class="works__item">
+              <div class="works__image">
+                <img src="pictures/perfumer.png" alt="Woman" />
+              </div>
+              <div class="works__caption">
+                <p class="works__name">MAGAZINE</p>
+                <p class="works__category">Logo, User Interface</p>
+              </div>
+            </div>
+
+            <div class="works__item">
+              <div class="works__image">
+                <img src="pictures/laptop.png" alt="laptop" />
+              </div>
+              <div class="works__caption">
+                <p class="works__name">Black Apple Watch</p>
+                <p class="works__category">Logo, User Interface</p>
+              </div>
+            </div>
+
+            <div class="works__item">
+              <div class="works__image">
+                <img src="pictures/keyboard.png" alt="keyboard" />
+              </div>
+              <div class="works__caption">
+                <p class="works__name">Dharma Webfont</p>
+                <p class="works__category">Branding, Web Design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="improve">
+        <div class="improve__content">
+          <h2 class="improve__title">
+            IMPROVE <span class="improve__title--light">YOUR BRAND</span>
+            WITH AN AWESOME SITE.
+          </h2>
+
+          <div class="improve__item">
+            <h3 class="improve__item-title">
+              COMPREHENSIVE
+              <span class="improve__item-title--light">BRAND</span>
+            </h3>
+            <p class="improve__item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros.
+            </p>
+          </div>
+
+          <div class="improve__item">
+            <h3 class="improve__item-title">
+              WEB <span class="improve__item-title--light">PRESENCE</span>
+            </h3>
+            <p class="improve__item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros.
+            </p>
+          </div>
+        </div>
+
+        <div class="improve__image">
+          <img src="pictures/tablet.png" alt="Tablet showing website" />
+        </div>
+
+        <div class="improve__image-tablet">
+          <img src="assets/images/people/tablet.svg" alt="Tablet showing website" />
+        </div>
+      </section>
+
+      <section class="opinion">
+        <div class="opinion__container">
+          <div class="opinion__title-container">
+            <h2 class="opinion__title-text">WHAT</h2>
+            <span class="opinion__title-text-light">THEY</span>
+            <h2 class="opinion__title-text">THINK</h2>
+          </div>
+          <div class="opinion__cards">
+            <div class="opinion__item" id="card-1">
+              <p class="opinion__item-phrase">
+                "A designer knows he has achieved perfection not when there is
+                nothing left to add, but when there is nothing left to take
+                away."
+              </p>
+              <div class="opinion__person">
+                <div class="opinion__image">
+                  <img src="pictures/slider_person_3.png" alt="Smiling black man" />
+                </div>
+                <div class="opinion__person-description">
+                  <p class="opinion__person-name">MATTHEW WEBSTER</p>
+                  <p class="opinion__person-status">Webflow Founder</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="opinion__item item-central" id="card-2">
+              <p class="opinion__item-phrase">
+                "The public is more familiar with bad design than good design.
+                It is, in effect, conditioned to prefer bad design, because
+                that is what it lives with."
+              </p>
+              <div class="opinion__person">
+                <div class="opinion__image">
+                  <img src="pictures/slider_person_2.png" alt="Smiling black man" />
+                </div>
+                <div class="opinion__person-description">
+                  <p class="opinion__person-name">CAITLIN WARD</p>
+                  <p class="opinion__person-status">Webflow Founder</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="opinion__item" id="card-3">
+              <p class="opinion__item-phrase">
+                "The public is more familiar with bad design than good design.
+                It is, in effect, conditioned to prefer bad design, because
+                that is what it lives with."
+              </p>
+              <div class="opinion__person">
+                <div class="opinion__image">
+                  <img src="pictures/slider_person_1.png" alt="Smiling black man" />
+                </div>
+                <div class="opinion__person-description">
+                  <p class="opinion__person-name">PAIGE BRENNAN</p>
+                  <p class="opinion__person-status">Webflow Founder</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="opinion__slider">
+          <a href="#card-1" class="opinion__dot"></a>
+          <a href="#card-2" class="opinion__dot"></a>
+          <a href="#card-3" class="opinion__dot"></a>
+        </div>
+      </section>
+
+      <section class="team">
+        <div class="team__side">
+          <div class="team__container">
+            <div class="team__header">
+              <h2 class="team__header-text">OUR</h2>
+              <span class="team__header-text-light">TEAM</span>
+              <h2 class="team__header-text">SKILLS</h2>
+            </div>
+            <div class="team__statistics">
+              <div class="team__item">
+                <div class="team__item-text">
+                  <span class="team__item-text-container">GRAPHIC DESIGN</span>
+                  <span class="team__item-text-container">80%</span>
+                </div>
+                <hr class="team__line-1" />
+              </div>
+
+              <div class="team__item">
+                <div class="team__item-text">
+                  <span class="team__item-text-container">LEAD GENERATION</span>
+                  <span class="team__item-text-container">41%</span>
+                </div>
+                <hr class="team__line-2" />
+              </div>
+
+              <div class="team__item">
+                <div class="team__item-text">
+                  <span class="team__item-text-container">PHOTOSHOP</span>
+                  <span class="team__item-text-container">70%</span>
+                </div>
+                <hr class="team__line-3" />
+              </div>
+
+              <div class="team__item">
+                <div class="team__item-text">
+                  <span class="team__item-text-container">ILLUSTRATION</span>
+                  <span class="team__item-text-container">100%</span>
+                </div>
+                <hr class="team__line-4" />
+              </div>
+              <span class="team__caption">* Over 8 years creating templates on Marketplace.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team__image">
+          <img src="pictures/team.png" alt="Tablet showing website" />
+        </div>
+      </section>
+
+      <section class="facts">
+        <div class="facts__header-text">
+          <span class="facts__text-bold">FUN</span>
+          <span class="facts__text-light">FACTS</span>
+        </div>
+
+        <div class="facts__achievements">
+          <div class="facts__track">
+            <div class="facts__item">
+              <div class="facts__image">
+                <img src="assets/images/graphics/medal.svg" alt="Medal" />
+              </div>
+              <div class="facts__item-container">
+                <span class="facts__item-big-text">8</span>
+                <span class="facts__item-description">Years on market</span>
+              </div>
+            </div>
+
+            <div class="facts__item">
+              <div class="facts__image">
+                <img src="assets/images/graphics/bracket.svg" alt="Medal" />
+              </div>
+              <div class="facts__item-container">
+                <span class="facts__item-big-text">110+</span>
+                <span class="facts__item-description">Projects done</span>
+              </div>
+            </div>
+
+            <div class="facts__item">
+              <div class="facts__image">
+                <img src="assets/images/graphics/human.svg" alt="human" />
+              </div>
+              <div class="facts__item-container">
+                <span class="facts__item-big-text">15</span>
+                <span class="facts__item-description">Hero's members</span>
+              </div>
+            </div>
+
+            <div class="facts__item">
+              <div class="facts__image">
+                <img src="assets/images/graphics/cup.svg" alt="Medal" />
+              </div>
+              <div class="facts__item-container">
+                <span class="facts__item-big-text">100+</span>
+                <span class="facts__item-description">Cups of coffee</span>
+              </div>
+            </div>
+
+            <div class="facts__item is-duplicate">
+              <div class="facts__image">
+                <img src="assets/images/graphics/medal.svg" alt="Medal" />
+              </div>
+              <div class="facts__item-container">
+                <span class="facts__item-big-text">8</span>
+                <span class="facts__item-description">Years on market</span>
+              </div>
+            </div>
+
+            <div class="facts__item is-duplicate">
+              <div class="facts__image">
+                <img src="assets/images/graphics/bracket.svg" alt="Medal" />
+              </div>
+              <div class="facts__item-container">
+                <span class="facts__item-big-text">110+</span>
+                <span class="facts__item-description">Projects done</span>
+              </div>
+            </div>
+
+            <div class="facts__item is-duplicate">
+              <div class="facts__image">
+                <img src="assets/images/graphics/human.svg" alt="human" />
+              </div>
+              <div class="facts__item-container">
+                <span class="facts__item-big-text">15</span>
+                <span class="facts__item-description">Hero's members</span>
+              </div>
+            </div>
+
+            <div class="facts__item is-duplicate">
+              <div class="facts__image">
+                <img src="assets/images/graphics/cup.svg" alt="Medal" />
+              </div>
+              <div class="facts__item-container">
+                <span class="facts__item-big-text">100+</span>
+                <span class="facts__item-description">Cups of coffee</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="blog">
+        <div class="blog__header">
+          <h2 class="blog__header-text">
+            OUR <span class="blog__header-text-light">BLOG</span>
+          </h2>
+          <div class="blog__header-circle">
+            <p class="block__header-circle-text">VIEW</p>
+            <p class="block__header-circle-text">ALL POST</p>
+          </div>
+        </div>
+
+        <div class="blog__cards">
+          <div class="blog__item">
+            <div class="blog__image">
+              <img src="pictures/blog_photo_1.png" alt="wall with photos" />
+            </div>
+            <div class="blog__card-container">
+              <div class="blog__card-lable">
+                <span class="blog__card-lable-text">MARKETING</span>
+              </div>
+              <div class="blog__card-description">
+                <p class="blog__card-description-line">
+                  Curating a workplace
+                </p>
+                <p class="blog__card-description-line">
+                  that inspires all of us
+                </p>
+              </div>
+              <p class="blog__card-date">February 3, 2021</p>
+            </div>
+          </div>
+
+          <div class="blog__item">
+            <div class="blog__image">
+              <img src="pictures/blog_photo_2.png" alt="wall with photos" />
+            </div>
+            <div class="blog__card-container">
+              <div class="blog__card-lable">
+                <span class="blog__card-lable-text">DESIGN</span>
+              </div>
+              <div class="blog__card-description">
+                <p class="blog__card-description-line">
+                  Designers who changed
+                </p>
+                <p class="blog__card-description-line">
+                  the web with Webflow
+                </p>
+              </div>
+              <p class="blog__card-date">February 25, 2021</p>
+            </div>
+          </div>
+
+          <div class="blog__item">
+            <div class="blog__image">
+              <img src="pictures/blog_photo_3.png" alt="wall with photos" />
+            </div>
+            <div class="blog__card-container">
+              <div class="blog__card-lable">
+                <span class="blog__card-lable-text">CODE</span>
+              </div>
+              <div class="blog__card-description">
+                <p class="blog__card-description-line">
+                  Communication between
+                </p>
+                <p class="blog__card-description-line">studio departments</p>
+              </div>
+              <p class="blog__card-date">March 9, 2021</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="talk">
+        <div class="talk__central-contaier">
+          <div class="talk__text-container">
+            <div class="talk__main-text">
+              <span class="talk__text-bold">LET'S</span>
+              <span class="talk__text-light">TALK</span>
+            </div>
+            <p class="talk__contact-text">Feel free to contact us</p>
+          </div>
+
+          <div class="talk__circle">
+            <p class="talk__circle-text">VIEW ON</p>
+            <p class="talk__circle-text">DESIGNER</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact__socials">
+          <div class="contact__image">
+            <img src="pictures/roby-logo.png" alt="Roby Logo" />
+          </div>
+          <div class="contact__apps">
+            <img src="pictures/facebook.png" alt="facebook" class="contact__app-icon" />
+            <img src="pictures/inst.png" alt="inst" class="contact__app-icon" />
+            <img src="pictures/twitter.png" alt="twitter" class="contact__app-icon" />
+            <img src="pictures/linkedin.png" alt="linkedin" class="contact__app-icon" />
+            <img src="pictures/ball.png" alt="ball" class="contact__app-icon" />
+          </div>
+        </div>
+
+        <div class="contact__container">
+          <div class="contact__address">
+            <div class="contact__address-container">
+              <p class="contact__address-bold">Address</p>
+              <div class="contact__address-location">
+                <p class="contact__address-light">14 New South Head Rd,</p>
+                <p class="contact__address-light">Triple Bay 3148</p>
+                <p class="contact__address-light">London, UK</p>
+              </div>
+            </div>
+
+            <div class="contact__address-button">
+              <span class="contact__address-button-text">FIND ON MAP</span>
+            </div>
+          </div>
+
+          <div class="contact__menu">
+            <p class="contact__menu-map">SITEMAP</p>
+
+            <ul class="contact__navigation-list">
+              <li class="contact__navigation-item">
+                <a href="#" class="contact__navigation-item-text">Home</a>
+              </li>
+              <li class="contact__navigation-item">
+                <a href="#" class="contact__navigation-item-text">About</a>
+              </li>
+              <li class="contact__navigation-item">
+                <a href="#" class="contact__navigation-item-text">News</a>
+              </li>
+              <li class="contact__navigation-item">
+                <a href="#" class="contact__navigation-item-text">Pricing</a>
+              </li>
+              <li class="contact__navigation-item">
+                <a href="#" class="contact__navigation-item-text">Style Guide</a>
+              </li>
+              <li class="contact__navigation-item">
+                <a href="#" class="contact__navigation-item-text">Image Licensing</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact__info">
+            <p class="contact__info-text">Contact</p>
+            <div class="contact__info-container">
+              <span class="contact__info-data">P: 3740 213 301</span>
+              <span class="contact__info-data">E: contact@robi.com</span>
+            </div>
+          </div>
+        </div>
+
+        <footer class="contact__rights">
+          <p class="contact__dev-info">
+            &copy; This is a Deni Bozo template powered by Webflow.
+          </p>
+        </footer>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
