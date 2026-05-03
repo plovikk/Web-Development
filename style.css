@@ -253,7 +253,11 @@ body {
 }
 
 .partners__track img:hover {
-  filter: grayscale(0);
+  animation: none !important; /* Полностью отключаем анимацию при наведении */
+  filter: grayscale(0) !important; /* Явно убираем серость */
+  -webkit-filter: grayscale(0) !important;
+  transform: scale(1.1) !important; 
+  cursor: pointer;
 }
 
 .is-duplicate {
@@ -1318,16 +1322,27 @@ body {
   padding: 0;
 }
 
-.contact__navigation-item {
-}
 
 .contact__navigation-item-text {
-  color: #000;
+  text-decoration: none;
+  color: #000000;
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 23px;
+  transition: color 0.3s ease;
+}
+
+/* 2. Посещенная ссылка (ТОЛЬКО ОДИН РАЗ В КОДЕ) */
+/* Сделаем её синей или красной для теста, чтобы ты точно увидел работу */
+.contact__navigation-item-text:visited {
+  color: blue !important; /* Яркий розовый для теста, чтобы точно увидеть результат */
+}
+/* 3. Ховер (всегда после visited) */
+.contact__navigation-item-text:hover {
+  color: #D8DADE !important;
+  text-decoration: underline;
 }
 
 .contact__info {
@@ -2939,6 +2954,52 @@ body {
   animation: heightPulse 2s ease-in-out infinite;
 }
 
+/* Анимация 12 - Изменение ширины с cubic-bezier our skills team section */
+@keyframes skillGrow {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+/* Применяем ко всем линиям навыков */
+.team__line-1, .team__line-2, .team__line-3, .team__line-4 {
+  transform-origin: left; /* Анимация идет слева направо */
+  animation: skillGrow 3s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate;
+}
+
+/* Исправленная Анимация 13 - Внешнее свечение/граница через box-shadow */
+@keyframes borderThickness {
+  0%, 100% { box-shadow: 0 0 0 1px #000; }
+  50% { box-shadow: 0 0 0 4px #000; }
+}
+
+/* Обновляем селектор метки в блоге */
+.blog__card-lable {
+  border: none; /* Убираем физическую рамку, которая расталкивала контент */
+  margin: 4px;  /* Добавляем небольшой отступ, чтобы box-shadow не обрезался */
+  animation: scalePulse 2s ease-in-out infinite, borderThickness 2s ease-in-out infinite;
+}
+
+/* Новая Анимация 14 - Плавающий эффект (Float) */
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Применяем к логотипам партнеров */
+.partners__track img {
+  animation: floatAnim 3s ease-in-out infinite;
+  filter: grayscale(1); /* Возвращаем ч/б стиль */
+  transition: filter 0.3s ease;
+}
+
+/* Анимация 15 - Появление с перемещением (Opacity + Transform + cubic-bezier) awards section*/
+@keyframes slideFade {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.about__holetitle {
+  animation: slideFade 3s cubic-bezier(0.25, 0.1, 0.25, 1) infinite alternate;
+}
 
 
 
