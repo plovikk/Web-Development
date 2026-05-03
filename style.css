@@ -84,13 +84,16 @@ body {
   display: block;
 }
 
+#menu-toggle, 
+.header__menu-btn {
+  display: none; /* Скрыто на ПК */
+}
+
 .nav-list {
   display: flex;
   list-style: none;
   gap: 25px;
-  align-self: stretch;
   align-items: center;
-  height: 20px;
 }
 
 .nav-link {
@@ -100,10 +103,6 @@ body {
   font-weight: 700;
   text-decoration: none;
   line-height: 20px;
-}
-
-.header__menu-btn {
-  display: none;
 }
 
 .hero {
@@ -1407,15 +1406,45 @@ body {
   }
 
   .header__menu-btn {
-    display: block;
-    background: none;
-    border: none;
-    padding: 0;
-    outline: none;
+    display: block !important;
+    position: relative;
+    z-index: 101;
+    cursor: pointer;
   }
 
   .nav-list {
-    display: none;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+    /* Магия превращения в мобильное меню */
+    position: fixed !important; 
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 100;
+    list-style: none; /* Убираем точки */
+    
+    /* Прячем за экран */
+    transform: translateX(100%) !important;
+    transition: transform 0.4s ease;
+  }
+
+   #menu-toggle:checked ~ .nav-list {
+    transform: translateX(0) !important;
+  }
+
+  /* Поворот бургера */
+  #menu-toggle:checked ~ .header__menu-btn img {
+    transform: rotate(90deg);
+  }
+
+.nav-link {
+    font-size: 32px;
   }
 
   .hero {
@@ -2849,6 +2878,26 @@ body {
 .blog__header-circle {
   animation: rotateCycle 15s linear infinite;
 }
+
+/* Анимация 6 - Искривление (Skew Cycle) works section */
+@keyframes skewCycle {
+  0%, 100% { transform: skew(0deg); }
+  50% { transform: skew(7deg); }
+}
+.works__title--bold {
+  display: inline-block;
+  animation: skewCycle 4s ease-in-out infinite;
+}
+
+/* Анимация 7 - Размытие (Blur Pulse) hero section главная картинка */
+@keyframes blurPulse {
+  0%, 100% { filter: blur(0px); }
+  50% { filter: blur(4px); }
+}
+.hero__image img {
+  animation: blurPulse 5s ease-in-out infinite;
+}
+
 
 
 
