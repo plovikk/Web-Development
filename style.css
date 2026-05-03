@@ -2916,6 +2916,28 @@ body {
   animation: horizontalPulse 5s ease-in-out infinite;
 }
 
+/* Анимация 10 - Мигание (Blinking) header email */
+@keyframes blinking {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.header__link {
+  animation: blinking 1s ease-in-out infinite;
+}
+
+/* Анимация 11 - Пульсация высоты (Height Pulse) awards */
+@keyframes heightPulse {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(4); }
+}
+
+.awards__line {
+  height: 1px;
+  background: #000;
+  width: 100%;
+  transform-origin: center; /* Увеличение будет идти от центра вверх и вниз */
+  animation: heightPulse 2s ease-in-out infinite;
+}
 
 
 
