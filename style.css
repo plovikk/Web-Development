@@ -228,16 +228,33 @@ body {
 }
 
 .partners__logos {
-  width: 1000px;
+  width: 100%; /* На ПК теперь тоже на всю ширину для плавности */
+  max-width: 1200px; /* Ограничим по контейнеру */
   margin: 0 auto;
   overflow: hidden;
+  /* Добавим маску, чтобы логотипы плавно появлялись и исчезали по бокам (необязательно, но красиво) */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .partners__track {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* На ПК меняем space-between на старт */
   align-items: center;
-  width: 100%;
+  gap: 80px; /* Расстояние между логотипами */
+  width: max-content; /* Контейнер растягивается под контент */
+  
+  /* ПРИМЕНЯЕМ АНИМАЦИЮ №3 */
+  animation: scroll 20s linear infinite; 
+}
+
+.partners__track img {
+  flex-shrink: 0;
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.partners__track img:hover {
+  filter: grayscale(0);
 }
 
 .is-duplicate {
@@ -599,6 +616,8 @@ body {
   align-items: center;
   gap: 20px;
   align-self: stretch;
+  padding-top: 20px !important;
+  margin-top: -20px;
 }
 
 .opinion__item {
@@ -613,6 +632,7 @@ body {
   border: 1px solid #000;
   background: #fff;
   opacity: 0.32;
+  overflow: visible;
 }
 .item-central {
   opacity: 1;
@@ -871,9 +891,19 @@ body {
   max-width: 1188px;
   width: 100%;
   margin: 0 auto;
-  justify-content: space-between;
-  align-items: flex-start;
   /* gap: 160px; */
+}
+
+.facts__achievements .is-duplicate {
+  display: none !important;
+}
+
+.facts__track {
+  display: flex;             /* ВКЛЮЧАЕМ ФЛЕКС */
+  flex-direction: row;        /* СТРОГО В РЯД */
+  width: 100%;               /* Растягиваем на всю ширину */
+  justify-content: space-between; /* Распределяем элементы по краям */
+  align-items: flex-start;
 }
 
 .facts__item {
@@ -882,6 +912,8 @@ body {
   justify-content: flex-start;
   gap: 14px;
 }
+
+
 
 .facts__image img {
   display: block;
@@ -1479,14 +1511,6 @@ body {
     flex-shrink: 0;
   }
 
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
 
   .about__container {
     display: grid;
@@ -1798,9 +1822,9 @@ body {
   }
 
   
-  .facts__track .facts__item:nth-child(n + 5) {
-    display: none !important;
-  }
+  .facts__track .is-duplicate {
+  display: none;
+}
 
   .blog {
     max-width: 100% !important;
@@ -2775,8 +2799,7 @@ body {
 
 /*Анимации*/
 
-
-/*Анимация 1(hero_cta)*/
+/*Анимация 1(hero_cta) - Градиент*/
 @keyframes fluidGradient {
   0% {
     background-position: 0% 50%;
@@ -2789,7 +2812,7 @@ body {
   }
 }
 
-/*Анимация 2(.contact__dev-info)*/
+/*Анимация 2(.contact__dev-info) - Прозрачность*/
 @keyframes smoothFade {
   0%, 100% {
     opacity: 1;
@@ -2798,3 +2821,35 @@ body {
     opacity: 0.2;
   }
 }
+
+/*Анимация 3(.partners) - Перемещение*/
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Анимация 4 - Масштабирование (Scale Pulse) blog section */
+@keyframes scalePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.blog__card-lable {
+  animation: scalePulse 2s ease-in-out infinite;
+}
+
+/* Анимация 5 - Вращение (Rotate Cycle) blog section*/
+@keyframes rotateCycle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.blog__header-circle {
+  animation: rotateCycle 15s linear infinite;
+}
+
+
+
+
