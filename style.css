@@ -1325,7 +1325,7 @@ body {
 
 .contact__navigation-item-text {
   text-decoration: none;
-  color: #000000;
+  color: #747474;
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
@@ -1334,16 +1334,6 @@ body {
   transition: color 0.3s ease;
 }
 
-/* 2. Посещенная ссылка (ТОЛЬКО ОДИН РАЗ В КОДЕ) */
-/* Сделаем её синей или красной для теста, чтобы ты точно увидел работу */
-.contact__navigation-item-text:visited {
-  color: blue !important; /* Яркий розовый для теста, чтобы точно увидеть результат */
-}
-/* 3. Ховер (всегда после visited) */
-.contact__navigation-item-text:hover {
-  color: #D8DADE !important;
-  text-decoration: underline;
-}
 
 .contact__info {
   display: flex;
@@ -2999,6 +2989,78 @@ body {
 }
 .about__holetitle {
   animation: slideFade 3s cubic-bezier(0.25, 0.1, 0.25, 1) infinite alternate;
+}
+
+/* --- ПСЕВДОКЛАССЫ --- */
+
+/* 1. :hover (уже используется) */
+.contact__navigation-item-text:hover {
+  color: #000 !important;
+  text-decoration: underline;
+}
+
+/* 2. :active - для кнопок */
+.contact__address-button:active,
+.header__menu-btn:active {
+  transform: scale(0.95);
+}
+
+/* 3. :last child - для последней ссылки в футере */
+.contact__navigation-item:last-child .contact__navigation-item-text {
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* 4. :nth-of-type - разные цвета для меток в блоге */
+.blog__item:nth-of-type(1) .blog__card-lable { background-color: #fff1f1; }
+.blog__item:nth-of-type(2) .blog__card-lable { background-color: #f1fff1; }
+.blog__item:nth-of-type(3) .blog__card-lable { background-color: #f1f1ff; }
+
+/* 5. :focus - подсветка при навигации с клавиатуры */
+.nav-link:focus {
+  outline: 2px solid #000;
+  outline-offset: 4px;
+}
+
+/* 6. :target - эффект для активной карточки в слайдере */
+.opinion__item:target {
+  border: 2px solid #000;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+/* --- ПСЕВДОЭЛЕМЕНТЫ --- */
+
+/* 1. ::before (уже используется) */
+/* 2. ::after (уже используется) */
+
+/* 3. ::selection - кастомное выделение текста */
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+/* 4. ::first-letter - буквица в заголовке hero */
+.hero__title span:first-child::first-letter {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* 5. ::first-line - стилизация первой строки описания */
+.about__text:first-of-type::first-line {
+  font-weight: 700;
+  color: #000;
+}
+
+/* 6. ::marker - кастомные маркеры списка навигации */
+.nav-list li::marker {
+  content: "• ";
+  color: #ccc;
+}
+.nav-list {
+  list-style: inside; /* Чтобы маркеры были видны */
 }
 
 
