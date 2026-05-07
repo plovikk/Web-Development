@@ -4,7 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roby Catalog</title>
+  <title>Roby Agency - Catalog</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="catalog.css" />
 </head>
 
+<body>
+  <div class="wrapper">
+    <header class="header container">
+      <div class="header__info">
+        <p class="header__text">A creative agency based in Helsinki.</p>
+        <a href="mailto:hello@robi.com" class="header__link">hello@robi.com</a>
+      </div>
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="assets/images/logos/roby-logo.png" alt="Roby Logo" />
+        </a>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" hidden />
+
+      <label for="menu-toggle" class="header__menu-btn">
+        <img src="pictures/burger.svg" alt="Menu" />
+      </label>
+
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="catalog.html" class="nav-link">Catalog</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+        <li>
+          <a href="#" class="nav-link"> Cart(<span>0</span>) </a>
+        </li>
+      </ul>
+    </header>
+
+  </div>
+
+  <script src="catalog.js"></script>
+</body>
+
+</html>
