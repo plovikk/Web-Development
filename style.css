@@ -1582,7 +1582,6 @@ body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
     padding: 10px 20px 40px 20px;
     gap: 20px;
   }
@@ -1676,7 +1675,7 @@ body {
     width: 100%;
   }
 
-  /* 2. ЗАГОЛОВОК */
+
   .opinion__title-container {
     width: 100%;
     justify-content: center;
@@ -2489,13 +2488,12 @@ body {
 
   .facts__track {
    display: flex !important;
-    flex-direction: row !important; /* Гарантируем строчку */
+    flex-direction: row !important; 
     flex-wrap: nowrap !important;
     width: max-content !important;
     align-items: flex-end;
-    gap: 0 !important; /* Используем марджины айтемов для точности */
-    
-    /* 1. ВКЛЮЧАЕМ АНИМАЦИЮ И РАЗБЛОКИРУЕМ ТРАНСФОРМ */
+    gap: 0 !important; 
+
     animation: factsScroll 20s linear infinite !important; 
     transform: translate3d(0,0,0) !important; 
     will-change: transform;
