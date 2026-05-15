@@ -2830,9 +2830,7 @@ body {
   }
 }
 
-/*Анимации*/
 
-/*Анимация 1(hero_cta) - Градиент*/
 @keyframes fluidGradient {
   0% {
     background-position: 0% 50%;
@@ -2849,7 +2847,7 @@ body {
   animation: fluidGradient 5s ease infinite;
 }
 
-/*Анимация 2(.contact__dev-info) - Прозрачность*/
+
 @keyframes smoothFade {
   0%, 100% {
     opacity: 1;
@@ -2863,7 +2861,7 @@ body {
     animation: smoothFade 4s ease-in-out infinite;
 }
 
-/*Анимация 3(.partners) - Перемещение*/
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -2877,7 +2875,7 @@ body {
       animation: scroll 10s linear infinite;
 }
 
-/* Анимация 4 - Масштабирование (Scale Pulse) blog section */
+
 @keyframes scalePulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
@@ -2886,7 +2884,7 @@ body {
   animation: scalePulse 2s ease-in-out infinite;
 }
 
-/* Анимация 5 - Вращение (Rotate Cycle) blog section*/
+
 @keyframes rotateCycle {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -2895,7 +2893,7 @@ body {
   animation: rotateCycle 15s linear infinite;
 }
 
-/* Анимация 6 - Искривление (Skew Cycle) works section */
+
 @keyframes skewCycle {
   0%, 100% { transform: skew(0deg); }
   50% { transform: skew(7deg); }
@@ -2905,7 +2903,7 @@ body {
   animation: skewCycle 4s ease-in-out infinite;
 }
 
-/* Анимация 7 - Размытие (Blur Pulse) hero section главная картинка */
+
 @keyframes blurPulse {
   0%, 100% { filter: blur(0px); }
   50% { filter: blur(4px); }
@@ -2914,7 +2912,7 @@ body {
   animation: blurPulse 5s ease-in-out infinite;
 }
 
-/* Анимация 8 - Тень (Box-shadow Ease-in) opinio section */
+
 @keyframes shadowPulse {
   0%, 100% { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
   50% { box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
@@ -2923,7 +2921,7 @@ body {
   animation: shadowPulse 6s ease-in infinite;
 }
 
-/* Анимация 9 - Горизонтальное перемещение (translateX Pulse) header */
+
 @keyframes horizontalPulse {
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(15px); }
@@ -2932,7 +2930,7 @@ body {
   animation: horizontalPulse 5s ease-in-out infinite;
 }
 
-/* Анимация 10 - Мигание (Blinking) header email */
+
 @keyframes blinking {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
@@ -2941,7 +2939,7 @@ body {
   animation: blinking 1s ease-in-out infinite;
 }
 
-/* Анимация 11 - Пульсация высоты (Height Pulse) awards */
+
 @keyframes heightPulse {
   0%, 100% { transform: scaleY(1); }
   50% { transform: scaleY(4); }
@@ -2951,49 +2949,49 @@ body {
   height: 1px;
   background: #000;
   width: 100%;
-  transform-origin: center; /* Увеличение будет идти от центра вверх и вниз */
+  transform-origin: center; 
   animation: heightPulse 2s ease-in-out infinite;
 }
 
-/* Анимация 12 - Изменение ширины с cubic-bezier our skills team section */
+
 @keyframes skillGrow {
   0% { transform: scaleX(0); }
   100% { transform: scaleX(1); }
 }
 
-/* Применяем ко всем линиям навыков */
+
 .team__line-1, .team__line-2, .team__line-3, .team__line-4 {
-  transform-origin: left; /* Анимация идет слева направо */
+  transform-origin: left;
   animation: skillGrow 3s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate;
 }
 
-/* Исправленная Анимация 13 - Внешнее свечение/граница через box-shadow */
+
 @keyframes borderThickness {
   0%, 100% { box-shadow: 0 0 0 1px #000; }
   50% { box-shadow: 0 0 0 4px #000; }
 }
 
-/* Обновляем селектор метки в блоге */
+
 .blog__card-lable {
-  border: none; /* Убираем физическую рамку, которая расталкивала контент */
-  margin: 4px;  /* Добавляем небольшой отступ, чтобы box-shadow не обрезался */
+  border: none; 
+  margin: 4px;  
   animation: scalePulse 2s ease-in-out infinite, borderThickness 2s ease-in-out infinite;
 }
 
-/* Новая Анимация 14 - Плавающий эффект (Float) */
+
 @keyframes floatAnim {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
-/* Применяем к логотипам партнеров */
+
 .partners__track img {
   animation: floatAnim 3s ease-in-out infinite;
   filter: grayscale(1); /* Возвращаем ч/б стиль */
   transition: filter 0.3s ease;
 }
 
-/* Анимация 15 - Появление с перемещением (Opacity + Transform + cubic-bezier) awards section*/
+
 @keyframes slideFade {
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -3002,21 +3000,21 @@ body {
   animation: slideFade 3s cubic-bezier(0.25, 0.1, 0.25, 1) infinite alternate;
 }
 
-/* --- ПСЕВДОКЛАССЫ --- */
 
-/* 1. :hover (уже используется) */
+
+
 .contact__navigation-item-text:hover {
   color: #000 !important;
   text-decoration: underline;
 }
 
-/* 2. :active - для кнопок */
+
 .contact__address-button:active,
 .header__menu-btn:active {
   transform: scale(0.95);
 }
 
-/* 3. :last child - для последней ссылки в футере */
+
 .contact__navigation-item:last-child .contact__navigation-item-text {
   color: #000;
   font-weight: 700;
@@ -3024,54 +3022,50 @@ body {
   font-size: 14px;
 }
 
-/* 4. :nth-of-type - разные цвета для меток в блоге */
+
 .blog__item:nth-of-type(1) .blog__card-lable { background-color: #fff1f1; }
 .blog__item:nth-of-type(2) .blog__card-lable { background-color: #f1fff1; }
 .blog__item:nth-of-type(3) .blog__card-lable { background-color: #f1f1ff; }
 
-/* 5. :focus - подсветка при навигации с клавиатуры */
+
 .nav-link:focus {
   outline: 2px solid #000;
   outline-offset: 4px;
 }
 
-/* 6. :target - эффект для активной карточки в слайдере */
+
 .opinion__item:target {
   border: 2px solid #000;
   transform: translateY(-10px);
   transition: all 0.3s ease;
 }
 
-/* --- ПСЕВДОЭЛЕМЕНТЫ --- */
+/*псевдоэлементы*/
 
-/* 1. ::before (уже используется) */
-/* 2. ::after (уже используется) */
-
-/* 3. ::selection - кастомное выделение текста */
 ::selection {
   background: #000;
   color: #fff;
 }
 
-/* 4. ::first-letter - буквица в заголовке hero */
+
 .hero__title span:first-child::first-letter {
   font-size: 1.2em;
   color: #555;
 }
 
-/* 5. ::first-line - стилизация первой строки описания */
+
 .about__text:first-of-type::first-line {
   font-weight: 700;
   color: #000;
 }
 
-/* 6. ::marker - кастомные маркеры списка навигации */
+
 .nav-list li::marker {
   content: "• ";
   color: #ccc;
 }
 .nav-list {
-  list-style: inside; /* Чтобы маркеры были видны */
+  list-style: inside;
 }
 
 
