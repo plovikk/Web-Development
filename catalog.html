@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roby Agency - Catalog</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="catalog.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header container">
+      <div class="header__info">
+        <p class="header__text">A creative agency based in Helsinki.</p>
+        <a href="mailto:hello@robi.com" class="header__link">hello@robi.com</a>
+      </div>
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="assets/images/logos/roby-logo.png" alt="Roby Logo" />
+        </a>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" hidden />
+
+      <label for="menu-toggle" class="header__menu-btn">
+        <img src="pictures/burger.svg" alt="Menu" />
+      </label>
+
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="catalog.html" class="nav-link">Catalog</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+        <li>
+          <a href="#" class="nav-link"> Cart(<span>0</span>) </a>
+        </li>
+      </ul>
+    </header>
+
+    <main class="container">
+      <section class="catalog">
+        <h1 class="catalog__title big__text">
+          Our <span class="hero__title--light">Services</span>
+        </h1>
+
+        <div class="catalog__controls">
+          <div class="control-group">
+            <input type="text" id="search-input" placeholder="Search by name or description..."
+              class="catalog__input" />
+          </div>
+
+          <div class="control-group">
+            <select id="sort-select" class="catalog__select">
+              <option value="default">Sort by...</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name-asc">Name: A-Z</option>
+              <option value="rating-desc">Rating: High to Low</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <div id="category-filters" class="catalog__categories">
+              <button class="category-btn active" data-category="all">
+                All
+              </button>
+              <button class="category-btn" data-category="Marketing">
+                Marketing
+              </button>
+              <button class="category-btn" data-category="Design">
+                Design
+              </button>
+              <button class="category-btn" data-category="Code">Code</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog__methods">
+          <p class="methods-title">Filters:</p>
+          <div class="methods-grid">
+            <button id="btn-filter" class="method-btn">
+              Filter (Price > 2000)
+            </button>
+            <button id="btn-map" class="method-btn">
+              Map (Add "PRO" to name)
+            </button>
+            <button id="btn-sort" class="method-btn">Sort (By Rating)</button>
+            <button id="btn-reduce" class="method-btn">
+              Reduce (Total Price)
+            </button>
+            <button id="btn-slice" class="method-btn">Slice (First 5)</button>
+            <button id="btn-reverse" class="method-btn">Reverse</button>
+            <button id="btn-find" class="method-btn">
+              Find (First Code)
+            </button>
+            <button id="btn-every" class="method-btn">
+              Every (Price > 500?)
+            </button>
+            <button id="btn-some" class="method-btn">
+              Some (Rating 5.0?)
+            </button>
+            <button id="btn-reset" class="method-btn reset">
+              Reset Catalog
+            </button>
+          </div>
+        </div>
+
+        <div id="catalog-container" class="catalog__grid">
+        </div>
+        <div id="no-results" class="no-results" style="display: none">
+          <p>No products found matching your criteria.</p>
+        </div>
+      </section>
+    </main>
+
+    <section class="contact container" id="contact">
+      <div class="contact__socials">
+        <div class="contact__image">
+          <img src="assets/images/logos/roby-logo.png" alt="Roby Logo" />
+        </div>
+        <div class="contact__apps">
+          <img src="assets/images/logos/facebook.png" alt="facebook" class="contact__app-icon" />
+          <img src="assets/images/logos/inst.png" alt="inst" class="contact__app-icon" />
+          <img src="assets/images/logos/twitter.png" alt="twitter" class="contact__app-icon" />
+          <img src="assets/images/logos/linkedin.png" alt="linkedin" class="contact__app-icon" />
+          <img src="assets/images/logos/ball.png" alt="ball" class="contact__app-icon" />
+        </div>
+      </div>
+      <footer class="contact__rights">
+        <p class="contact__dev-info">
+          &copy; This is a Deni Bozo template powered by Webflow.
+        </p>
+      </footer>
+    </section>
+  </div>
+
+  <script src="catalog.js"></script>
+</body>
+
+</html>
